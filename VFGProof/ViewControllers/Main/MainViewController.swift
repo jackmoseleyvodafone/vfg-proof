@@ -16,7 +16,7 @@ class MainViewController: BaseViewController {
         
 //        loadProposedSolution();
         
-//        loadUndocumentedSolution();
+        loadUndocumentedSolution();
     }
     
     private func loadProposedSolution() {
