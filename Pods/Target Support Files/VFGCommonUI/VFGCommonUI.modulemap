@@ -1,0 +1,6 @@
+framework module VFGCommonUI {
+  umbrella header "VFGCommonUI-umbrella.h"
+
+  export *
+  module * { export * }
+}

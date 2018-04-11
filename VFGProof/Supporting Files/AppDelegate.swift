@@ -8,17 +8,62 @@
 
 import UIKit
 import CoreData
+import VFGSplash
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    // Properties
+    
     var window: UIWindow?
 
+    private lazy var navigationController: UINavigationController = {
+        let navigationController: UINavigationController = UINavigationController()
+        
+        navigationController.viewControllers = [MainViewController()]
+        navigationController.setNavigationBarHidden(true, animated: false)
+        
+        return navigationController
+    }()
+    
+    private lazy var splashViewController: UIViewController = {
+        return VFGAnimatedSplash.sharedInstance.returnViewController()
+    }()
+
+    // AppDelegate functions
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+
+        window = UIWindow(frame: UIScreen.main.bounds)
+
+        if let window = window {
+
+            VFGAnimatedSplash.sharedInstance.setComplitionHandler { (result) in
+
+                VFGAnimatedSplash.sharedInstance.removeSplashView(completionHandler: nil)
+
+                self.window?.rootViewController = self.navigationController
+            }
+
+            window.rootViewController = VFGAnimatedSplash.sharedInstance.returnViewController()
+            window.makeKeyAndVisible()
+            VFGAnimatedSplash.sharedInstance.splashInstance = VFGAnimatedSplash.sharedInstance.returnViewController()
+
+            VFGAnimatedSplash.sharedInstance.runSplashAnimationFor(timeOut: 2)
+        }
         return true
     }
+
+//    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+//
+//        window = UIWindow(frame: UIScreen.main.bounds)
+//
+//        if let window = window {
+//            window.rootViewController = navigationController
+//            window.makeKeyAndVisible()
+//        }
+//        return true
+//    }
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

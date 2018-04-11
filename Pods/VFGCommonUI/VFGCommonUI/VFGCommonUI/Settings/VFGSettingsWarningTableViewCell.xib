@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="vodafone-regular.ttf">
+            <string>VodafoneRg-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="VFGSettingsWarningTableViewCell" rowHeight="125" id="Dya-Cl-imo" customClass="VFGSettingsWarningTableViewCell" customModule="VFGCommonUI" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="125"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Dya-Cl-imo" id="wbC-5o-fvF">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="124.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="Tem-yf-me0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="124.5"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="252" translatesAutoresizingMaskIntoConstraints="NO" id="yIu-tf-lFO">
+                                <rect key="frame" x="15" y="15" width="345" height="94.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="warning" translatesAutoresizingMaskIntoConstraints="NO" id="vmF-m2-dKe">
+                                        <rect key="frame" x="16" y="34.5" width="28" height="26"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="28" id="06o-nR-eLs"/>
+                                            <constraint firstAttribute="height" constant="26" id="DhP-4L-EqH"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="You need this option switched ON to receive personalised recommendations" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UjU-7b-YAs">
+                                        <rect key="frame" x="59" y="15" width="271" height="64.5"/>
+                                        <fontDescription key="fontDescription" name="VodafoneRg-Regular" family="Vodafone Rg" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.2177814245223999" green="0.22047007083892822" blue="0.220470130443573" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="vmF-m2-dKe" firstAttribute="leading" secondItem="yIu-tf-lFO" secondAttribute="leading" constant="16" id="J0z-dR-qNk"/>
+                                    <constraint firstItem="UjU-7b-YAs" firstAttribute="top" secondItem="yIu-tf-lFO" secondAttribute="top" constant="15" id="Ktm-02-zif"/>
+                                    <constraint firstItem="UjU-7b-YAs" firstAttribute="leading" secondItem="vmF-m2-dKe" secondAttribute="trailing" constant="15" id="LaN-tT-jGb"/>
+                                    <constraint firstAttribute="bottom" secondItem="UjU-7b-YAs" secondAttribute="bottom" constant="15" id="Rg1-Ti-PTy"/>
+                                    <constraint firstAttribute="trailing" secondItem="UjU-7b-YAs" secondAttribute="trailing" constant="15" id="i5g-HD-Zo1"/>
+                                    <constraint firstItem="vmF-m2-dKe" firstAttribute="centerY" secondItem="UjU-7b-YAs" secondAttribute="centerY" id="zXs-Ji-al1"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="downArrow" translatesAutoresizingMaskIntoConstraints="NO" id="EWI-Rr-ag1">
+                                <rect key="frame" x="302" y="108" width="22" height="12.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="12.5" id="Qlq-iq-Wdw"/>
+                                    <constraint firstAttribute="width" constant="22" id="g8A-yk-piC"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="yIu-tf-lFO" firstAttribute="leading" secondItem="Tem-yf-me0" secondAttribute="leading" constant="15" id="9xO-ja-9vb"/>
+                            <constraint firstAttribute="bottom" secondItem="yIu-tf-lFO" secondAttribute="bottom" constant="15" id="AUN-SH-yey"/>
+                            <constraint firstAttribute="trailing" secondItem="yIu-tf-lFO" secondAttribute="trailing" constant="15" id="HoM-IZ-iNs"/>
+                            <constraint firstAttribute="trailing" secondItem="EWI-Rr-ag1" secondAttribute="trailing" constant="51" id="MNA-7o-ncR"/>
+                            <constraint firstItem="EWI-Rr-ag1" firstAttribute="top" secondItem="yIu-tf-lFO" secondAttribute="bottom" constant="-1" id="UBv-83-8YV"/>
+                            <constraint firstAttribute="bottom" secondItem="EWI-Rr-ag1" secondAttribute="bottom" constant="3.5" id="fpV-32-UPz"/>
+                            <constraint firstItem="yIu-tf-lFO" firstAttribute="top" secondItem="Tem-yf-me0" secondAttribute="top" constant="15" id="qeb-JL-wOm"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="Tem-yf-me0" secondAttribute="bottom" id="C9w-qR-GxH"/>
+                    <constraint firstItem="Tem-yf-me0" firstAttribute="top" secondItem="wbC-5o-fvF" secondAttribute="top" id="Gb7-vV-ckz"/>
+                    <constraint firstAttribute="trailing" secondItem="Tem-yf-me0" secondAttribute="trailing" id="OxL-aV-gb8"/>
+                    <constraint firstItem="Tem-yf-me0" firstAttribute="leading" secondItem="wbC-5o-fvF" secondAttribute="leading" id="s8U-K6-dnM"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="messageLabel" destination="UjU-7b-YAs" id="hDd-TX-gcg"/>
+            </connections>
+            <point key="canvasLocation" x="90.5" y="94.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="downArrow" width="22" height="12"/>
+        <image name="warning" width="192" height="192"/>
+    </resources>
+</document>

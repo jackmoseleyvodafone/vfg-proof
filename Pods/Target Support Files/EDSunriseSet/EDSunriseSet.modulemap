@@ -1,0 +1,6 @@
+framework module EDSunriseSet {
+  umbrella header "EDSunriseSet-umbrella.h"
+
+  export *
+  module * { export * }
+}

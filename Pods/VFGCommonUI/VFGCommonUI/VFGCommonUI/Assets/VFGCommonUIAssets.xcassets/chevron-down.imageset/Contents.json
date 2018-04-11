@@ -1,0 +1,16 @@
+{
+  "images" : [
+    {
+      "idiom" : "iphone",
+      "filename" : "chevron-down.pdf"
+    },
+    {
+      "idiom" : "ipad",
+      "filename" : "chevronDown.pdf"
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  }
+}

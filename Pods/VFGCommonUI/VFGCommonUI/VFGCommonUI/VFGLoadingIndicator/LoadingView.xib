@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment version="2064" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="LoadingView" customModule="VFGCommonUI" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Uno-ja-64f">
+                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </imageView>
+                <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ffF-mm-FDv">
+                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DsG-h9-RP7">
+                    <rect key="frame" x="138.5" y="295" width="97" height="97"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="DsG-h9-RP7" secondAttribute="height" multiplier="1:1" id="SPh-7Y-hjB"/>
+                    </constraints>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vodafone_Logo" translatesAutoresizingMaskIntoConstraints="NO" id="HOw-9d-e0x">
+                    <rect key="frame" x="16" y="28" width="41" height="41"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="41" id="TF4-jd-34a"/>
+                        <constraint firstAttribute="width" secondItem="HOw-9d-e0x" secondAttribute="height" id="saB-FK-nTo"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="soo-Wc-Bvi">
+                    <rect key="frame" x="16" y="35" width="38.5" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="soo-Wc-Bvi" secondAttribute="height" multiplier="23:15" id="aC3-Hb-sQA"/>
+                    </constraints>
+                    <state key="normal" image="backIcon"/>
+                    <connections>
+                        <action selector="backClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="81Q-0m-yMO"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IUf-D3-HTK">
+                    <rect key="frame" x="325" y="35" width="34" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="IUf-D3-HTK" secondAttribute="height" multiplier="23:15" id="yWa-YA-hn8"/>
+                    </constraints>
+                    <state key="normal" image="menu01"/>
+                    <connections>
+                        <action selector="menuClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="sZJ-jh-ysl"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rbk-Ym-4fM">
+                    <rect key="frame" x="150" y="250" width="75" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Uno-ja-64f" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" id="8lt-Jc-iuw"/>
+                <constraint firstItem="Uno-ja-64f" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="HYU-BF-a8T"/>
+                <constraint firstItem="Uno-ja-64f" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="Mj5-YQ-1Le"/>
+                <constraint firstItem="DsG-h9-RP7" firstAttribute="width" secondItem="Uno-ja-64f" secondAttribute="height" multiplier="97:647" id="TaQ-Kl-80f"/>
+                <constraint firstItem="ffF-mm-FDv" firstAttribute="bottom" secondItem="Uno-ja-64f" secondAttribute="bottom" id="Xtv-qf-AtS"/>
+                <constraint firstItem="HOw-9d-e0x" firstAttribute="top" secondItem="ffF-mm-FDv" secondAttribute="top" constant="8" id="Y3h-yq-lhS"/>
+                <constraint firstItem="ffF-mm-FDv" firstAttribute="trailing" secondItem="Uno-ja-64f" secondAttribute="trailing" id="blo-lw-fAg"/>
+                <constraint firstItem="DsG-h9-RP7" firstAttribute="centerY" secondItem="Uno-ja-64f" secondAttribute="centerY" id="eZ4-jS-s1A"/>
+                <constraint firstItem="DsG-h9-RP7" firstAttribute="centerX" secondItem="Uno-ja-64f" secondAttribute="centerX" id="gqM-hu-szu"/>
+                <constraint firstItem="rbk-Ym-4fM" firstAttribute="bottom" secondItem="DsG-h9-RP7" secondAttribute="top" constant="-24" id="lfx-ZC-PY1"/>
+                <constraint firstItem="IUf-D3-HTK" firstAttribute="top" secondItem="Uno-ja-64f" secondAttribute="top" constant="15" id="pQj-yh-Tul"/>
+                <constraint firstItem="soo-Wc-Bvi" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="qQz-ba-xjN"/>
+                <constraint firstItem="ffF-mm-FDv" firstAttribute="leading" secondItem="Uno-ja-64f" secondAttribute="leading" id="qhG-aS-De9"/>
+                <constraint firstItem="ffF-mm-FDv" firstAttribute="top" secondItem="Uno-ja-64f" secondAttribute="top" id="uOQ-tZ-b6X"/>
+                <constraint firstAttribute="trailing" secondItem="IUf-D3-HTK" secondAttribute="trailing" constant="16" id="wBo-Qm-Kuy"/>
+                <constraint firstItem="rbk-Ym-4fM" firstAttribute="centerX" secondItem="DsG-h9-RP7" secondAttribute="centerX" id="wha-5p-ecA"/>
+                <constraint firstItem="HOw-9d-e0x" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="y8l-IA-kyN"/>
+                <constraint firstItem="Uno-ja-64f" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="yV5-ry-757"/>
+                <constraint firstItem="soo-Wc-Bvi" firstAttribute="top" secondItem="Uno-ja-64f" secondAttribute="top" constant="15" id="zdA-so-zoQ"/>
+            </constraints>
+            <connections>
+                <outlet property="MenuButton" destination="IUf-D3-HTK" id="3yx-bo-RaZ"/>
+                <outlet property="backButton" destination="soo-Wc-Bvi" id="Pdu-du-YHA"/>
+                <outlet property="backgroundDimmedView" destination="ffF-mm-FDv" id="a9u-o0-hfp"/>
+                <outlet property="loadingBackgroundImage" destination="Uno-ja-64f" id="sGg-gI-cz9"/>
+                <outlet property="loadingContainerView" destination="DsG-h9-RP7" id="5nA-4C-YUp"/>
+                <outlet property="loadingLabel" destination="rbk-Ym-4fM" id="2kn-Xj-Wtj"/>
+                <outlet property="topMarginStatusBarConstraint" destination="Mj5-YQ-1Le" id="jAx-AY-equ"/>
+                <outlet property="vodafoneLogoImageView" destination="HOw-9d-e0x" id="pfx-8V-95D"/>
+            </connections>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Vodafone_Logo" width="41" height="41"/>
+        <image name="backIcon" width="28" height="25"/>
+        <image name="menu01" width="29" height="21"/>
+    </resources>
+</document>

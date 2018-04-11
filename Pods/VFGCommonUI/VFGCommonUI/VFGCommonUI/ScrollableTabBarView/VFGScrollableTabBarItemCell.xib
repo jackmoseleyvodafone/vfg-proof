@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="vodafone-regular.ttf">
+            <string>VodafoneRg-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="VFGScrollableTabBarItemCell" customModule="VFGCommonUI" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="200" height="100"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GRi-RP-3k8">
+                    <rect key="frame" x="0.0" y="0.0" width="200" height="66"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hn8-Hd-GBV">
+                            <rect key="frame" x="89" y="0.0" width="22" height="22"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="22" id="8xv-eS-zPd"/>
+                                <constraint firstAttribute="height" constant="22" id="tZE-Go-OVn"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Labelsdadadadasdasdasdasdasdasdsdsad" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.92000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="SKL-AI-NSJ">
+                            <rect key="frame" x="2" y="28" width="196" height="38"/>
+                            <fontDescription key="fontDescription" name="VodafoneRg-Regular" family="Vodafone Rg" pointSize="16"/>
+                            <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="SKL-AI-NSJ" firstAttribute="top" secondItem="Hn8-Hd-GBV" secondAttribute="bottom" constant="6" id="ARv-ea-Ae2"/>
+                        <constraint firstItem="SKL-AI-NSJ" firstAttribute="leading" secondItem="GRi-RP-3k8" secondAttribute="leading" constant="1.5" id="g2Z-QK-POQ"/>
+                        <constraint firstAttribute="trailing" secondItem="SKL-AI-NSJ" secondAttribute="trailing" constant="1.5" id="tjX-jO-M25"/>
+                        <constraint firstItem="Hn8-Hd-GBV" firstAttribute="centerX" secondItem="GRi-RP-3k8" secondAttribute="centerX" id="vzK-lS-aZK"/>
+                        <constraint firstAttribute="bottom" secondItem="SKL-AI-NSJ" secondAttribute="bottom" id="x2j-BA-haa"/>
+                        <constraint firstItem="Hn8-Hd-GBV" firstAttribute="top" secondItem="GRi-RP-3k8" secondAttribute="top" id="z8P-WG-Zgp"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="GRi-RP-3k8" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="0kA-N1-oZc"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="GRi-RP-3k8" secondAttribute="bottom" id="Hm6-gC-Pcm"/>
+                <constraint firstItem="GRi-RP-3k8" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="U7E-XN-QgZ"/>
+                <constraint firstAttribute="trailing" secondItem="GRi-RP-3k8" secondAttribute="trailing" id="j3t-nv-LVa"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="iconImageView" destination="Hn8-Hd-GBV" id="9Jx-nP-32b"/>
+                <outlet property="titleLabel" destination="SKL-AI-NSJ" id="Nbf-b3-Xtf"/>
+            </connections>
+        </view>
+    </objects>
+</document>

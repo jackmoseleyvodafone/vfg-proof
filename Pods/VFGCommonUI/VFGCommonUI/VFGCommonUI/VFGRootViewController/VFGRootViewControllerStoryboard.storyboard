@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Root View Controller-->
+        <scene sceneID="2LW-Hk-oJL">
+            <objects>
+                <viewController storyboardIdentifier="VFGRootViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xwy-FD-yBW" customClass="VFGRootViewController" customModule="VFGCommonUI" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qbp-8f-2yo"/>
+                        <viewControllerLayoutGuide type="bottom" id="zw7-8a-hlh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oFD-Px-sAe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="agW-J8-aR5" userLabel="BlackOverlayView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z05-XI-CPu" userLabel="appViewController">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <connections>
+                                    <segue destination="SIW-jG-xQk" kind="embed" identifier="embedNavigationController" id="cBz-Ox-YrO"/>
+                                </connections>
+                            </containerView>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yOC-L8-U9w" customClass="VFGNudgeView" customModule="VFGCommonUI" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="375" height="0.0"/>
+                                <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" id="lKx-Ke-5YQ"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bex-Rq-H1C" userLabel="topBarView" customClass="VFGTopBar" customModule="VFGCommonUI" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="PpO-sa-PVT"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G67-yf-8UQ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="Uc4-Nh-pFH"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Z05-XI-CPu" firstAttribute="top" secondItem="yOC-L8-U9w" secondAttribute="bottom" id="0qB-Aj-snV"/>
+                            <constraint firstItem="yOC-L8-U9w" firstAttribute="width" secondItem="oFD-Px-sAe" secondAttribute="width" id="Gss-YQ-XTb"/>
+                            <constraint firstAttribute="trailing" secondItem="Bex-Rq-H1C" secondAttribute="trailing" id="LzU-UI-ej6"/>
+                            <constraint firstItem="agW-J8-aR5" firstAttribute="width" secondItem="oFD-Px-sAe" secondAttribute="width" id="OWK-fO-gyS"/>
+                            <constraint firstItem="G67-yf-8UQ" firstAttribute="leading" secondItem="oFD-Px-sAe" secondAttribute="leading" id="UMC-9h-n6y"/>
+                            <constraint firstItem="agW-J8-aR5" firstAttribute="centerX" secondItem="oFD-Px-sAe" secondAttribute="centerX" id="V5X-29-oA8"/>
+                            <constraint firstItem="G67-yf-8UQ" firstAttribute="top" secondItem="oFD-Px-sAe" secondAttribute="top" id="X4j-fc-eZ6"/>
+                            <constraint firstItem="yOC-L8-U9w" firstAttribute="top" secondItem="G67-yf-8UQ" secondAttribute="bottom" id="XjN-MP-eAw"/>
+                            <constraint firstItem="agW-J8-aR5" firstAttribute="centerY" secondItem="oFD-Px-sAe" secondAttribute="centerY" id="Xqy-Iq-KSA"/>
+                            <constraint firstAttribute="trailing" secondItem="yOC-L8-U9w" secondAttribute="trailing" id="ZW2-KO-XRY"/>
+                            <constraint firstAttribute="trailing" secondItem="Z05-XI-CPu" secondAttribute="trailing" id="ZYy-g1-VAo"/>
+                            <constraint firstItem="Bex-Rq-H1C" firstAttribute="leading" secondItem="oFD-Px-sAe" secondAttribute="leading" id="eRj-JC-3gn"/>
+                            <constraint firstItem="zw7-8a-hlh" firstAttribute="top" secondItem="Z05-XI-CPu" secondAttribute="bottom" id="f9j-XZ-1UH"/>
+                            <constraint firstAttribute="trailing" secondItem="G67-yf-8UQ" secondAttribute="trailing" id="nBb-B9-Hqb"/>
+                            <constraint firstItem="Bex-Rq-H1C" firstAttribute="top" secondItem="yOC-L8-U9w" secondAttribute="bottom" id="pg5-Qk-2eX"/>
+                            <constraint firstItem="agW-J8-aR5" firstAttribute="height" secondItem="oFD-Px-sAe" secondAttribute="height" id="pwc-ml-pdL"/>
+                            <constraint firstItem="yOC-L8-U9w" firstAttribute="leading" secondItem="oFD-Px-sAe" secondAttribute="leading" id="tal-4c-YkJ"/>
+                            <constraint firstItem="Z05-XI-CPu" firstAttribute="leading" secondItem="oFD-Px-sAe" secondAttribute="leading" id="vqQ-px-f3K"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="blackOverlayView" destination="agW-J8-aR5" id="Sih-fw-Lee"/>
+                        <outlet property="nudgeView" destination="yOC-L8-U9w" id="ao2-3g-f53"/>
+                        <outlet property="nudgeViewHeightConstraint" destination="lKx-Ke-5YQ" id="NxY-nA-2Mc"/>
+                        <outlet property="statusBarBackgroundView" destination="G67-yf-8UQ" id="1wH-5W-PWR"/>
+                        <outlet property="topBar" destination="Bex-Rq-H1C" id="2W5-2B-ZvH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k5o-5c-0Yj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="333.60000000000002" y="50.824587706146929"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="DNm-Kd-8oC">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="SIW-jG-xQk" customClass="VFGNavigationController" customModule="VFGCommonUI" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="rKB-7M-V13">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="73O-Dd-xeY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1100" y="51"/>
+        </scene>
+    </scenes>
+</document>

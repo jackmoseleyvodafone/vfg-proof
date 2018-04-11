@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Qbb-ok-vdG">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Web View Controller-->
+        <scene sceneID="Am4-Zz-SQb">
+            <objects>
+                <viewController id="Qbb-ok-vdG" customClass="VFGWebViewController" customModule="VFGCommonUI" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Xqb-Ef-U9e"/>
+                        <viewControllerLayoutGuide type="bottom" id="eKv-Rm-H8K"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NzJ-zC-VN9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Udl-r7-ddQ">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Qbb-ok-vdG" id="2bR-KH-6XN"/>
+                                </connections>
+                            </webView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FBz-WI-p3W">
+                                <rect key="frame" x="319" y="20" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="7si-pP-0Sy"/>
+                                    <constraint firstAttribute="height" constant="40" id="feH-4F-xpd"/>
+                                </constraints>
+                                <state key="normal" image="close"/>
+                                <connections>
+                                    <action selector="closeButton:" destination="Qbb-ok-vdG" eventType="touchUpInside" id="MJC-DU-cIH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Udl-r7-ddQ" firstAttribute="leading" secondItem="NzJ-zC-VN9" secondAttribute="leading" id="DeM-pS-wxr"/>
+                            <constraint firstItem="Udl-r7-ddQ" firstAttribute="top" secondItem="Xqb-Ef-U9e" secondAttribute="bottom" id="K6z-qM-aaW"/>
+                            <constraint firstItem="FBz-WI-p3W" firstAttribute="top" secondItem="Xqb-Ef-U9e" secondAttribute="bottom" id="YOO-of-Ge0"/>
+                            <constraint firstAttribute="trailing" secondItem="FBz-WI-p3W" secondAttribute="trailing" constant="16" id="s2v-De-5fs"/>
+                            <constraint firstAttribute="trailing" secondItem="Udl-r7-ddQ" secondAttribute="trailing" id="wqx-iu-JKY"/>
+                            <constraint firstItem="eKv-Rm-H8K" firstAttribute="top" secondItem="Udl-r7-ddQ" secondAttribute="bottom" id="z83-M6-5nR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="closeButtonOutlet" destination="FBz-WI-p3W" id="BWI-rE-mOU"/>
+                        <outlet property="webView" destination="Udl-r7-ddQ" id="MKE-9F-Hwq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QFG-BO-wJg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-103" y="-6"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="close" width="64" height="64"/>
+    </resources>
+</document>

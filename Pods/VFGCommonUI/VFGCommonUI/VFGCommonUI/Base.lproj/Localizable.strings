@@ -1,0 +1,8 @@
+"needhelp_bubble_text" = "Need\nhelp?";
+
+// *************************************************************
+// *                                     COMMON UI                                                                *
+// *************************************************************
+"commonui_connection_error_alert_title" = "Problem occurred";
+"commonui_connection_error_alert_message" = "Check your Internet connection.";
+"commonui_connection_error_alert_ok_button" = "OK";

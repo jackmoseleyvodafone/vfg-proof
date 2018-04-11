@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="VFGCarouselCollectionViewCell" customModule="VFGCommonUI" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UcV-MS-SuT">
+                        <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RYp-mT-Tdv">
+                        <rect key="frame" x="65" y="65" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="9ZH-V0-AJG"/>
+                            <constraint firstAttribute="width" constant="20" id="Gdd-jx-Vit"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="RYp-mT-Tdv" secondAttribute="trailing" constant="5" id="ab7-eu-JPG"/>
+                <constraint firstItem="UcV-MS-SuT" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="hMG-CV-VPC"/>
+                <constraint firstAttribute="bottom" secondItem="UcV-MS-SuT" secondAttribute="bottom" id="qrj-v6-kpa"/>
+                <constraint firstItem="UcV-MS-SuT" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="sFy-mc-NMn"/>
+                <constraint firstAttribute="bottom" secondItem="RYp-mT-Tdv" secondAttribute="bottom" constant="5" id="tXC-CQ-XH8"/>
+                <constraint firstAttribute="trailing" secondItem="UcV-MS-SuT" secondAttribute="trailing" id="ybc-ic-xLo"/>
+            </constraints>
+            <connections>
+                <outlet property="itemImageView" destination="UcV-MS-SuT" id="u4d-XS-bqP"/>
+                <outlet property="selectionImageView" destination="RYp-mT-Tdv" id="skc-np-D2z"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+</document>

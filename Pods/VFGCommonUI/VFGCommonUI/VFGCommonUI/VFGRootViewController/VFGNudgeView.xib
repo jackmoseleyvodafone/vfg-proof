@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Vodafone-Rg.ttf">
+            <string>VodafoneRg-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VFGNudgeView" customModule="VFGCommonUI" customModuleProvider="target">
+            <connections>
+                <outlet property="containerView" destination="uLM-JG-dSX" id="i8J-sJ-9H1"/>
+                <outlet property="descriptionLabel" destination="gri-be-7hU" id="Yzi-6Y-xgY"/>
+                <outlet property="primaryButton" destination="IbU-2T-J2y" id="v4U-p5-9Zp"/>
+                <outlet property="primaryButtonRightConstraint" destination="hNW-3i-2in" id="1we-eR-Gv0"/>
+                <outlet property="secondaryButton" destination="xcI-uJ-TFn" id="UuJ-QG-2TT"/>
+                <outlet property="secondaryButtonLeftConstraint" destination="vRF-sF-2BU" id="rCz-8E-EMe"/>
+                <outlet property="titleLabel" destination="avc-Ae-tgp" id="fb4-OY-uNR"/>
+                <outlet property="verticalSpaceBetweenPrimaryButtonAndSecondaryButton" destination="mqd-ii-W5c" id="6zs-TH-VpF"/>
+                <outlet property="width" destination="WHf-Fd-023" id="olO-Bw-RR2"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="uLM-JG-dSX">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="172"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="close_white" translatesAutoresizingMaskIntoConstraints="NO" id="0ft-d5-9P4">
+                    <rect key="frame" x="336" y="35" width="24" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="24" id="0aw-je-EIO"/>
+                        <constraint firstAttribute="height" constant="24" id="2AF-cc-nbF"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tr6-qk-Shd">
+                    <rect key="frame" x="341" y="30" width="24" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Tr6-qk-Shd" secondAttribute="height" multiplier="1:1" id="1no-i1-9qx"/>
+                        <constraint firstAttribute="height" constant="24" id="edk-io-CHs"/>
+                    </constraints>
+                    <connections>
+                        <action selector="closeButtonPressed:" destination="-1" eventType="touchUpInside" id="7m3-wT-byx"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="avc-Ae-tgp">
+                    <rect key="frame" x="30" y="70" width="315" height="0.0"/>
+                    <fontDescription key="fontDescription" name="VodafoneRg-Regular" family="Vodafone Rg" pointSize="30"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="249" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gri-be-7hU">
+                    <rect key="frame" x="30" y="77.5" width="315" height="0.0"/>
+                    <fontDescription key="fontDescription" name="VodafoneRg-Regular" family="Vodafone Rg" pointSize="20"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xcI-uJ-TFn">
+                    <rect key="frame" x="30" y="97.5" width="30" height="45"/>
+                    <color key="backgroundColor" red="0.68627450980000004" green="0.68627450980000004" blue="0.68627450980000004" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="IhN-TY-I7r"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="VodafoneRg-Regular" family="Vodafone Rg" pointSize="18"/>
+                    <state key="normal">
+                        <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="secondaryButtonPressed:" destination="-1" eventType="touchUpInside" id="F7s-Tk-rD5"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IbU-2T-J2y">
+                    <rect key="frame" x="315" y="97.5" width="30" height="45"/>
+                    <color key="backgroundColor" red="0.74117647060000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" name="VodafoneRg-Regular" family="Vodafone Rg" pointSize="18"/>
+                    <state key="normal">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="primaryButtonPressed:" destination="-1" eventType="touchUpInside" id="Brf-9n-j07"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="xcI-uJ-TFn" firstAttribute="leading" secondItem="uLM-JG-dSX" secondAttribute="leading" constant="30" id="4kv-5d-xtn"/>
+                <constraint firstAttribute="trailing" secondItem="IbU-2T-J2y" secondAttribute="trailing" constant="30" id="73L-EX-eNb"/>
+                <constraint firstItem="gri-be-7hU" firstAttribute="top" secondItem="avc-Ae-tgp" secondAttribute="bottom" constant="7.5" id="EnU-l8-ZfL"/>
+                <constraint firstItem="IbU-2T-J2y" firstAttribute="top" secondItem="xcI-uJ-TFn" secondAttribute="top" id="FZ8-Rr-BAR"/>
+                <constraint firstAttribute="trailing" secondItem="gri-be-7hU" secondAttribute="trailing" constant="30" id="NkJ-x0-eVw"/>
+                <constraint firstItem="avc-Ae-tgp" firstAttribute="leading" secondItem="uLM-JG-dSX" secondAttribute="leading" constant="30" id="OlX-Uq-pwB"/>
+                <constraint firstAttribute="width" constant="375" id="WHf-Fd-023"/>
+                <constraint firstItem="xcI-uJ-TFn" firstAttribute="top" secondItem="gri-be-7hU" secondAttribute="bottom" constant="20" id="ZNp-3y-gOS"/>
+                <constraint firstItem="IbU-2T-J2y" firstAttribute="bottom" secondItem="xcI-uJ-TFn" secondAttribute="bottom" id="ZaN-Wg-FcN"/>
+                <constraint firstItem="gri-be-7hU" firstAttribute="leading" secondItem="uLM-JG-dSX" secondAttribute="leading" constant="30" id="axO-E4-Gsq"/>
+                <constraint firstAttribute="trailing" secondItem="0ft-d5-9P4" secondAttribute="trailing" constant="15" id="biw-W3-2gd"/>
+                <constraint firstAttribute="bottom" secondItem="xcI-uJ-TFn" secondAttribute="bottom" constant="30" id="f0d-ka-OVL"/>
+                <constraint firstItem="avc-Ae-tgp" firstAttribute="top" secondItem="uLM-JG-dSX" secondAttribute="top" constant="70" id="gs5-rE-fM6"/>
+                <constraint firstAttribute="trailing" secondItem="xcI-uJ-TFn" secondAttribute="trailing" priority="250" constant="30" id="hNW-3i-2in"/>
+                <constraint firstAttribute="trailing" secondItem="Tr6-qk-Shd" secondAttribute="trailing" constant="10" id="jxm-sK-2Av"/>
+                <constraint firstItem="0ft-d5-9P4" firstAttribute="top" secondItem="uLM-JG-dSX" secondAttribute="top" constant="35" id="mQ3-o6-zmB"/>
+                <constraint firstItem="IbU-2T-J2y" firstAttribute="leading" secondItem="xcI-uJ-TFn" secondAttribute="trailing" priority="250" constant="8" id="mqd-ii-W5c"/>
+                <constraint firstItem="Tr6-qk-Shd" firstAttribute="top" secondItem="uLM-JG-dSX" secondAttribute="top" constant="30" id="piG-YK-L4F"/>
+                <constraint firstItem="IbU-2T-J2y" firstAttribute="width" secondItem="xcI-uJ-TFn" secondAttribute="width" id="rNA-wR-Fez"/>
+                <constraint firstItem="IbU-2T-J2y" firstAttribute="leading" secondItem="uLM-JG-dSX" secondAttribute="leading" priority="250" constant="30" id="vRF-sF-2BU"/>
+                <constraint firstAttribute="trailing" secondItem="avc-Ae-tgp" secondAttribute="trailing" constant="30" id="wKS-ut-XJx"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-67.5" y="-146"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="close_white" width="33" height="33"/>
+    </resources>
+</document>

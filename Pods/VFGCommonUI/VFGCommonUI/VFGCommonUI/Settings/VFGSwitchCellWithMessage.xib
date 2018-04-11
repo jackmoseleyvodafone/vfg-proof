@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Vodafone-Rg.ttf">
+            <string>VodafoneRg-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="VFGSwitchCellWithMessage" rowHeight="173" id="g5O-Eb-bgP" userLabel="Switch Cell" customClass="VFGSwitchCellWithMessage" customModule="VFGCommonUI" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="289" height="173"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" tableViewCell="g5O-Eb-bgP" id="38a-58-8Ib">
+                <rect key="frame" x="0.0" y="0.0" width="289" height="172.5"/>
+                <autoresizingMask key="autoresizingMask" flexibleMinY="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tZT-7K-Uzo">
+                        <rect key="frame" x="15" y="0.0" width="259" height="172.5"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7kk-AV-laU">
+                                <rect key="frame" x="0.0" y="0.0" width="259" height="101"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" verticalHuggingPriority="252" translatesAutoresizingMaskIntoConstraints="NO" id="Dfa-YX-I2E">
+                                        <rect key="frame" x="15" y="20" width="229" height="64"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EbV-JN-JWh">
+                                                <rect key="frame" x="50" y="13" width="169" height="36"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <string key="text">Touch ID failed to enable.
+Please try again later</string>
+                                                <fontDescription key="fontDescription" name="VodafoneRg-Regular" family="Vodafone Rg" pointSize="16"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="warning" translatesAutoresizingMaskIntoConstraints="NO" id="cES-7y-YRV">
+                                                <rect key="frame" x="12" y="17" width="28" height="26"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="28" id="By8-DI-uZf"/>
+                                                    <constraint firstAttribute="height" constant="26" id="GVb-RZ-Rep"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.29019607843137252" green="0.30196078431372547" blue="0.30588235294117649" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="EbV-JN-JWh" secondAttribute="trailing" constant="10" id="78U-VW-cCR"/>
+                                            <constraint firstAttribute="bottom" secondItem="EbV-JN-JWh" secondAttribute="bottom" constant="15" id="Bc7-1s-xTS"/>
+                                            <constraint firstItem="cES-7y-YRV" firstAttribute="leading" secondItem="Dfa-YX-I2E" secondAttribute="leading" constant="12" id="Lmm-Rk-S5f"/>
+                                            <constraint firstItem="EbV-JN-JWh" firstAttribute="leading" secondItem="cES-7y-YRV" secondAttribute="trailing" constant="10" id="MV7-Mn-llQ"/>
+                                            <constraint firstItem="cES-7y-YRV" firstAttribute="top" secondItem="Dfa-YX-I2E" secondAttribute="top" constant="17" id="Rdk-Cg-Vgs"/>
+                                            <constraint firstItem="EbV-JN-JWh" firstAttribute="top" secondItem="Dfa-YX-I2E" secondAttribute="top" constant="13" id="ohK-70-BMi"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Dfa-YX-I2E" firstAttribute="leading" secondItem="7kk-AV-laU" secondAttribute="leading" constant="15" id="2xK-ts-EAK"/>
+                                    <constraint firstAttribute="bottom" secondItem="Dfa-YX-I2E" secondAttribute="bottom" constant="17" id="NLI-vs-yz8"/>
+                                    <constraint firstItem="Dfa-YX-I2E" firstAttribute="top" secondItem="7kk-AV-laU" secondAttribute="top" constant="20" id="eKu-Qj-jIL"/>
+                                    <constraint firstAttribute="height" constant="86" id="uqG-u2-Eds"/>
+                                    <constraint firstAttribute="trailing" secondItem="Dfa-YX-I2E" secondAttribute="trailing" constant="15" id="vq8-yX-hvu"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="uqG-u2-Eds"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <view contentMode="scaleToFill" verticalCompressionResistancePriority="1000" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cWB-Tg-4LP">
+                                <rect key="frame" x="0.0" y="116" width="259" height="57"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s1Q-b0-bqE">
+                                        <rect key="frame" x="17" y="0.0" width="172" height="67"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="VodafoneRg-Regular" family="Vodafone Rg" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LB5-b0-Ugf">
+                                        <rect key="frame" x="20" y="85" width="219" height="1"/>
+                                        <color key="backgroundColor" red="0.90760460139999999" green="0.90760460139999999" blue="0.90760460139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="OIk-pO-XuS"/>
+                                        </constraints>
+                                    </view>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eSg-os-L1j">
+                                        <rect key="frame" x="195" y="19" width="51" height="31"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <action selector="switchValueDidChange" destination="g5O-Eb-bgP" eventType="valueChanged" id="2wY-RN-RYc"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="LB5-b0-Ugf" secondAttribute="bottom" id="D99-sN-WH1"/>
+                                    <constraint firstAttribute="trailing" secondItem="s1Q-b0-bqE" secondAttribute="trailing" constant="70" id="G6H-b2-UyF"/>
+                                    <constraint firstItem="eSg-os-L1j" firstAttribute="centerY" secondItem="s1Q-b0-bqE" secondAttribute="centerY" id="JIV-jF-ICl"/>
+                                    <constraint firstItem="s1Q-b0-bqE" firstAttribute="leading" secondItem="cWB-Tg-4LP" secondAttribute="leading" constant="17" id="Kmg-rc-8CM"/>
+                                    <constraint firstAttribute="trailing" secondItem="LB5-b0-Ugf" secondAttribute="trailing" constant="20" id="WVm-0u-Dhx"/>
+                                    <constraint firstAttribute="trailing" secondItem="eSg-os-L1j" secondAttribute="trailing" constant="15" id="Xn0-rb-cZr"/>
+                                    <constraint firstItem="s1Q-b0-bqE" firstAttribute="top" secondItem="cWB-Tg-4LP" secondAttribute="top" id="hmt-PU-BUb"/>
+                                    <constraint firstItem="LB5-b0-Ugf" firstAttribute="top" secondItem="s1Q-b0-bqE" secondAttribute="bottom" constant="18" id="mVD-zW-qRB"/>
+                                    <constraint firstItem="LB5-b0-Ugf" firstAttribute="leading" secondItem="cWB-Tg-4LP" secondAttribute="leading" constant="20" id="xI0-Em-1I9"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7kk-AV-laU" firstAttribute="leading" secondItem="tZT-7K-Uzo" secondAttribute="leading" id="1mD-hK-ErE"/>
+                            <constraint firstItem="cWB-Tg-4LP" firstAttribute="leading" secondItem="tZT-7K-Uzo" secondAttribute="leading" id="JTs-oi-EbU"/>
+                            <constraint firstItem="cWB-Tg-4LP" firstAttribute="top" secondItem="7kk-AV-laU" secondAttribute="top" constant="87" id="MG4-ys-eo9"/>
+                            <constraint firstAttribute="trailing" secondItem="7kk-AV-laU" secondAttribute="trailing" id="QEA-6t-ayH"/>
+                            <constraint firstAttribute="bottom" secondItem="cWB-Tg-4LP" secondAttribute="bottom" id="cWK-cY-cnM"/>
+                            <constraint firstAttribute="trailing" secondItem="cWB-Tg-4LP" secondAttribute="trailing" id="pDy-cS-urT"/>
+                            <constraint firstItem="7kk-AV-laU" firstAttribute="top" secondItem="tZT-7K-Uzo" secondAttribute="top" id="yBe-wG-lMJ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="tZT-7K-Uzo" firstAttribute="top" secondItem="38a-58-8Ib" secondAttribute="top" id="SvU-qy-EpA"/>
+                    <constraint firstAttribute="trailing" secondItem="tZT-7K-Uzo" secondAttribute="trailing" constant="15" id="TQi-lL-Fum"/>
+                    <constraint firstAttribute="bottom" secondItem="tZT-7K-Uzo" secondAttribute="bottom" id="c2I-Ul-Pnk"/>
+                    <constraint firstItem="tZT-7K-Uzo" firstAttribute="leading" secondItem="38a-58-8Ib" secondAttribute="leading" constant="15" id="hLR-0B-0LP"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="customCellMessageLabel" destination="EbV-JN-JWh" id="cTf-1u-wOg"/>
+                <outlet property="customCellTitleLabel" destination="s1Q-b0-bqE" id="pX0-B1-t38"/>
+                <outlet property="messageView" destination="7kk-AV-laU" id="eM8-gf-YdH"/>
+                <outlet property="messageViewHeightConstraint" destination="MG4-ys-eo9" id="eUJ-aV-oMI"/>
+                <outlet property="switchButton" destination="eSg-os-L1j" id="9Q8-yV-IIJ"/>
+                <outlet property="viewContent" destination="cWB-Tg-4LP" id="p5Q-am-itD"/>
+            </connections>
+            <point key="canvasLocation" x="18.5" y="0.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="warning" width="192" height="192"/>
+    </resources>
+</document>

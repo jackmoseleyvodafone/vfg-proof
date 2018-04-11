@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="KGk-i7-Jjw" customClass="PlanTextViewCell" customModule="VFGCommonUI" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="99.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4G2-x2-buK">
+                        <rect key="frame" x="15" y="0.0" width="290" height="100"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tj4-AY-1QX">
+                                <rect key="frame" x="15" y="18" width="260" height="46"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QDA-QJ-YXt">
+                                <rect key="frame" x="15" y="99" width="260" height="1"/>
+                                <color key="backgroundColor" red="0.90760460139999999" green="0.90760460139999999" blue="0.90760460139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="HrO-H2-fWm"/>
+                                </constraints>
+                            </view>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Labelweg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wqR-r6-JLb">
+                                <rect key="frame" x="15" y="66" width="73.5" height="26"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Twd-ka-klX">
+                                <rect key="frame" x="91" y="66" width="43" height="26"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.31764705882352939" green="0.31764705882352939" blue="0.31764705882352939" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tj4-AY-1QX" firstAttribute="leading" secondItem="4G2-x2-buK" secondAttribute="leading" constant="15" id="1w6-U7-cXW"/>
+                            <constraint firstAttribute="bottom" secondItem="QDA-QJ-YXt" secondAttribute="bottom" id="AG8-Db-Eum"/>
+                            <constraint firstItem="Twd-ka-klX" firstAttribute="top" secondItem="tj4-AY-1QX" secondAttribute="bottom" constant="2" id="AuA-UO-4JK"/>
+                            <constraint firstItem="QDA-QJ-YXt" firstAttribute="leading" secondItem="4G2-x2-buK" secondAttribute="leading" constant="15" id="Dxj-BB-87g"/>
+                            <constraint firstAttribute="trailing" secondItem="QDA-QJ-YXt" secondAttribute="trailing" constant="15" id="FhH-6v-rCl"/>
+                            <constraint firstItem="Twd-ka-klX" firstAttribute="height" secondItem="wqR-r6-JLb" secondAttribute="height" id="WJ7-fF-9XC"/>
+                            <constraint firstAttribute="trailing" secondItem="tj4-AY-1QX" secondAttribute="trailing" constant="15" id="aYR-TJ-inn"/>
+                            <constraint firstItem="Twd-ka-klX" firstAttribute="leading" secondItem="wqR-r6-JLb" secondAttribute="trailing" constant="2.5" id="b2x-0l-GH2"/>
+                            <constraint firstItem="QDA-QJ-YXt" firstAttribute="top" secondItem="tj4-AY-1QX" secondAttribute="bottom" constant="35" id="cDO-t1-PbC"/>
+                            <constraint firstItem="tj4-AY-1QX" firstAttribute="top" secondItem="4G2-x2-buK" secondAttribute="top" constant="18" id="gJQ-RH-52J"/>
+                            <constraint firstItem="wqR-r6-JLb" firstAttribute="leading" secondItem="4G2-x2-buK" secondAttribute="leading" constant="15" id="hCm-Ck-KtP"/>
+                            <constraint firstItem="Twd-ka-klX" firstAttribute="centerY" secondItem="wqR-r6-JLb" secondAttribute="centerY" id="oxL-7g-Ajk"/>
+                            <constraint firstItem="QDA-QJ-YXt" firstAttribute="top" secondItem="wqR-r6-JLb" secondAttribute="bottom" constant="7" id="sCq-3b-P6e"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="4G2-x2-buK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="KWd-uN-7EY"/>
+                    <constraint firstItem="4G2-x2-buK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="XoT-PP-nnC"/>
+                    <constraint firstAttribute="trailing" secondItem="4G2-x2-buK" secondAttribute="trailing" constant="15" id="ZAN-Im-eMb"/>
+                    <constraint firstAttribute="bottom" secondItem="4G2-x2-buK" secondAttribute="bottom" id="u4a-NZ-pmf"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="customCellSeeMoreText" destination="wqR-r6-JLb" id="uf0-tL-MNV"/>
+                <outlet property="customCellTitle" destination="tj4-AY-1QX" id="2NF-xs-QE4"/>
+                <outlet property="cutomCellLinkButton" destination="Twd-ka-klX" id="yE2-Mm-9rO"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

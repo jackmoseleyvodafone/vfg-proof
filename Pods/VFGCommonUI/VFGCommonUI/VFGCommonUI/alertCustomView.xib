@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13178.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13156.2"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="VFGCustomView" customModule="VFGCommonUI" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3MH-YX-RMa">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ljh-bU-cGM">
+                    <rect key="frame" x="0.0" y="180.5" width="375" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VRt-PE-L4O">
+                    <rect key="frame" x="123" y="50.5" width="128" height="105"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="105" id="XTL-2Z-nCK"/>
+                        <constraint firstAttribute="width" constant="128" id="wf3-aV-f5J"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="VRt-PE-L4O" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="33s-nm-PAQ"/>
+                <constraint firstItem="Ljh-bU-cGM" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="5r8-G9-hJ3"/>
+                <constraint firstItem="3MH-YX-RMa" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Env-Py-hBS"/>
+                <constraint firstAttribute="trailing" secondItem="Ljh-bU-cGM" secondAttribute="trailing" id="FNL-Px-PBs"/>
+                <constraint firstItem="VRt-PE-L4O" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="50.5" id="LGo-Vh-p7D"/>
+                <constraint firstItem="3MH-YX-RMa" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="PvY-LF-Wdu"/>
+                <constraint firstItem="Ljh-bU-cGM" firstAttribute="top" secondItem="VRt-PE-L4O" secondAttribute="bottom" constant="25" id="UYb-Di-i7E"/>
+                <constraint firstItem="VRt-PE-L4O" firstAttribute="top" secondItem="3MH-YX-RMa" secondAttribute="bottom" constant="30" id="i3L-Cg-azH"/>
+                <constraint firstAttribute="trailing" secondItem="3MH-YX-RMa" secondAttribute="trailing" id="qez-Eb-CT6"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="header" destination="3MH-YX-RMa" id="DJc-g1-iTr"/>
+                <outlet property="image" destination="VRt-PE-L4O" id="IN6-jd-ORz"/>
+                <outlet property="imgHeight" destination="XTL-2Z-nCK" id="yi3-OS-E3t"/>
+                <outlet property="imgToView" destination="LGo-Vh-p7D" id="So2-5r-CRk"/>
+                <outlet property="imgTop" destination="i3L-Cg-azH" id="l5K-wZ-WSh"/>
+                <outlet property="imgWidth" destination="wf3-aV-f5J" id="ito-ld-9oa"/>
+                <outlet property="paragraph" destination="Ljh-bU-cGM" id="NcT-7F-gWS"/>
+                <outlet property="paragraphTop" destination="UYb-Di-i7E" id="3Jx-Mu-KxR"/>
+            </connections>
+            <point key="canvasLocation" x="21.5" y="58"/>
+        </view>
+    </objects>
+</document>

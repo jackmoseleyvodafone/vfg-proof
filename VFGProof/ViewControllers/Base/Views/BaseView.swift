@@ -9,13 +9,31 @@
 import UIKit
 
 class BaseView: UIView {
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    
+    // MARK: Init Methods
+    
+    convenience init() {
+        self.init(frame: CGRect.zero)
+        
+        setupSubviews()
+        setupAutolayout()
     }
-    */
-
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+    
+    // MARK: View Setup
+    
+    func setupSubviews() {
+        
+    }
+    
+    func setupAutolayout() {
+        
+    }
 }

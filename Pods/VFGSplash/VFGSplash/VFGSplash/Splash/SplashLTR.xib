@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="vodafone-regular.ttf">
+            <string>VodafoneRg-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VFGSplashViewController" customModule="VFGSplash" customModuleProvider="target">
+            <connections>
+                <outlet property="animationContainerView" destination="XoX-If-TIo" id="57e-Mp-cMe"/>
+                <outlet property="backgroundImageView" destination="IJx-dg-mEW" id="W2K-pf-Aik"/>
+                <outlet property="maskTriangleView" destination="EaJ-tu-o4w" id="Tqn-Gb-KYh"/>
+                <outlet property="splashTriangleView" destination="WpL-nj-GBI" id="JGk-D4-fa0"/>
+                <outlet property="view" destination="sZ4-l0-N1i" id="aC8-9s-oKu"/>
+                <outlet property="vodafoneLogoImageView" destination="EDs-RB-BTK" id="DfC-CY-w4e"/>
+                <outlet property="vodafoneTextLabel" destination="axW-DG-4i2" id="Ej8-Bx-4wu"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="sZ4-l0-N1i">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_splash" translatesAutoresizingMaskIntoConstraints="NO" id="IJx-dg-mEW">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </imageView>
+                <view autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XoX-If-TIo">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7WR-r5-D5o">
+                            <rect key="frame" x="0.0" y="0.0" width="133" height="250"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WpL-nj-GBI" customClass="VFGSplashTriangleView" customModule="VFGSplash">
+                            <rect key="frame" x="-83.5" y="-55" width="375" height="667"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EaJ-tu-o4w" customClass="VFGSplashTriangleView" customModule="VFGSplash">
+                            <rect key="frame" x="-83.5" y="-55" width="375" height="667"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </view>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="EDs-RB-BTK">
+                            <rect key="frame" x="75" y="250" width="58" height="58"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="EDs-RB-BTK" secondAttribute="height" multiplier="1:1" id="2fe-hG-m3a"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Vodafone" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.30000001192092896" translatesAutoresizingMaskIntoConstraints="NO" id="axW-DG-4i2">
+                            <rect key="frame" x="153" y="261" width="152" height="35"/>
+                            <fontDescription key="fontDescription" name="VodafoneRg-Regular" family="Vodafone Rg" pointSize="30"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="right" relation="greaterThanOrEqual" secondItem="axW-DG-4i2" secondAttribute="right" constant="20" id="1fO-LU-8Ay"/>
+                        <constraint firstItem="WpL-nj-GBI" firstAttribute="width" secondItem="XoX-If-TIo" secondAttribute="width" id="6rV-2r-1Zk"/>
+                        <constraint firstItem="EaJ-tu-o4w" firstAttribute="centerY" secondItem="EDs-RB-BTK" secondAttribute="centerY" id="7Xm-He-Jvt"/>
+                        <constraint firstItem="EaJ-tu-o4w" firstAttribute="width" secondItem="XoX-If-TIo" secondAttribute="width" id="8y7-8S-cvb"/>
+                        <constraint firstItem="WpL-nj-GBI" firstAttribute="centerY" secondItem="EDs-RB-BTK" secondAttribute="centerY" id="CGE-JK-WJv"/>
+                        <constraint firstItem="7WR-r5-D5o" firstAttribute="height" secondItem="XoX-If-TIo" secondAttribute="height" multiplier="0.333" id="Iqh-H9-ubA"/>
+                        <constraint firstItem="axW-DG-4i2" firstAttribute="left" secondItem="EDs-RB-BTK" secondAttribute="right" constant="20" id="JIZ-AM-u4y"/>
+                        <constraint firstItem="7WR-r5-D5o" firstAttribute="width" secondItem="XoX-If-TIo" secondAttribute="width" multiplier="0.355" id="KP9-s7-xH1"/>
+                        <constraint firstItem="EDs-RB-BTK" firstAttribute="right" secondItem="7WR-r5-D5o" secondAttribute="right" id="LHA-m7-fLX"/>
+                        <constraint firstItem="EDs-RB-BTK" firstAttribute="width" secondItem="XoX-If-TIo" secondAttribute="width" multiplier="0.155" id="MA6-Np-Ss8"/>
+                        <constraint firstItem="WpL-nj-GBI" firstAttribute="centerX" secondItem="EDs-RB-BTK" secondAttribute="centerX" id="aP0-sX-m6d"/>
+                        <constraint firstItem="EaJ-tu-o4w" firstAttribute="height" secondItem="XoX-If-TIo" secondAttribute="height" id="cK3-Tl-Ysw"/>
+                        <constraint firstItem="axW-DG-4i2" firstAttribute="centerY" secondItem="EDs-RB-BTK" secondAttribute="centerY" id="peP-8O-b3U"/>
+                        <constraint firstItem="7WR-r5-D5o" firstAttribute="top" secondItem="XoX-If-TIo" secondAttribute="top" id="pfd-x0-ycu"/>
+                        <constraint firstItem="7WR-r5-D5o" firstAttribute="left" secondItem="XoX-If-TIo" secondAttribute="left" id="qye-aC-dAn"/>
+                        <constraint firstItem="EaJ-tu-o4w" firstAttribute="centerX" secondItem="EDs-RB-BTK" secondAttribute="centerX" id="sY1-54-aIe"/>
+                        <constraint firstItem="EDs-RB-BTK" firstAttribute="top" secondItem="7WR-r5-D5o" secondAttribute="bottom" id="uFa-rq-7u3"/>
+                        <constraint firstItem="WpL-nj-GBI" firstAttribute="height" secondItem="XoX-If-TIo" secondAttribute="height" id="utA-Xx-ADp"/>
+                        <constraint firstItem="7WR-r5-D5o" firstAttribute="height" secondItem="XoX-If-TIo" secondAttribute="height" multiplier="0.375" id="wV7-S4-LvG"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="Iqh-H9-ubA"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=regular">
+                        <mask key="constraints">
+                            <include reference="Iqh-H9-ubA"/>
+                            <exclude reference="wV7-S4-LvG"/>
+                        </mask>
+                    </variation>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="IJx-dg-mEW" firstAttribute="width" secondItem="sZ4-l0-N1i" secondAttribute="width" id="4cE-ns-Sr5"/>
+                <constraint firstItem="IJx-dg-mEW" firstAttribute="centerX" secondItem="sZ4-l0-N1i" secondAttribute="centerX" id="7oG-JI-3x1"/>
+                <constraint firstItem="IJx-dg-mEW" firstAttribute="centerY" secondItem="sZ4-l0-N1i" secondAttribute="centerY" id="Ygf-CV-COp"/>
+                <constraint firstItem="XoX-If-TIo" firstAttribute="centerX" secondItem="sZ4-l0-N1i" secondAttribute="centerX" id="Zm2-Gv-Ds4"/>
+                <constraint firstItem="XoX-If-TIo" firstAttribute="width" secondItem="sZ4-l0-N1i" secondAttribute="width" id="eox-VU-yYA"/>
+                <constraint firstItem="XoX-If-TIo" firstAttribute="height" secondItem="sZ4-l0-N1i" secondAttribute="height" id="hMH-vx-Xwb"/>
+                <constraint firstItem="IJx-dg-mEW" firstAttribute="height" secondItem="sZ4-l0-N1i" secondAttribute="height" id="jqf-to-Mbe"/>
+                <constraint firstItem="XoX-If-TIo" firstAttribute="centerY" secondItem="sZ4-l0-N1i" secondAttribute="centerY" id="rl3-E9-DEy"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="bg_splash" width="375" height="667"/>
+        <image name="logo" width="56" height="56"/>
+    </resources>
+</document>

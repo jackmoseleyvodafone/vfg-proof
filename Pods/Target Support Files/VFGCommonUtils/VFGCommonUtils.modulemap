@@ -1,0 +1,6 @@
+framework module VFGCommonUtils {
+  umbrella header "VFGCommonUtils-umbrella.h"
+
+  export *
+  module * { export * }
+}

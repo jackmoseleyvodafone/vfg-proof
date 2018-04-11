@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AEJ-5N-YhW">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="vodafone-regular.ttf">
+            <string>VodafoneRg-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Alert View Controller-->
+        <scene sceneID="1Vv-z0-Rcb">
+            <objects>
+                <viewController storyboardIdentifier="AlertViewController" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="AEJ-5N-YhW" customClass="VFGAlertViewController" customModule="VFGCommonUI" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NyN-Bi-Fqb"/>
+                        <viewControllerLayoutGuide type="bottom" id="38g-El-mUq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VgS-YD-eJ2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WMF-dK-tkR" userLabel="Fading View">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6N5-7b-vrt" userLabel="Sliding View">
+                                <rect key="frame" x="0.0" y="55" width="320" height="513"/>
+                                <color key="backgroundColor" red="1" green="0.0017744274820000001" blue="0.23529671369999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L6E-zH-1Mc">
+                                <rect key="frame" x="0.0" y="123" width="320" height="428"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pbI-mn-xHq">
+                                        <rect key="frame" x="60" y="136" width="200" height="24"/>
+                                        <fontDescription key="fontDescription" name="VodafoneRg-Regular" family="Vodafone Rg" pointSize="20"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="VodafoneRg-Regular" family="Vodafone Rg" pointSize="30"/>
+                                        </variation>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="3Hk-Wt-7IZ" userLabel="Icon Image View">
+                                        <rect key="frame" x="100" y="8" width="120" height="120"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="120" id="8km-Y4-OWl"/>
+                                            <constraint firstAttribute="width" secondItem="3Hk-Wt-7IZ" secondAttribute="height" multiplier="1:1" id="O7Q-7H-R5I"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dgy-Ii-TmN" userLabel="Primary Button">
+                                        <rect key="frame" x="60" y="183" width="200" height="31.5"/>
+                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="dgy-Ii-TmN" secondAttribute="height" multiplier="10:1" id="HtC-AV-cgS"/>
+                                            <constraint firstAttribute="width" secondItem="dgy-Ii-TmN" secondAttribute="height" multiplier="147:23" id="ThT-Uu-fEQ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="VodafoneRg-Regular" family="Vodafone Rg" pointSize="17"/>
+                                        <state key="normal" title="Primary">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="ThT-Uu-fEQ"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <exclude reference="HtC-AV-cgS"/>
+                                                <include reference="ThT-Uu-fEQ"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="VodafoneRg-Regular" family="Vodafone Rg" pointSize="23.5"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="primaryButtonTapped:" destination="AEJ-5N-YhW" eventType="touchUpInside" id="PiL-6y-ICO"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hsO-PZ-UKD" userLabel="Secondary Button">
+                                        <rect key="frame" x="60" y="229.5" width="200" height="31"/>
+                                        <color key="backgroundColor" red="0.51764705879999995" green="0.51764705879999995" blue="0.51764705879999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="hsO-PZ-UKD" secondAttribute="height" multiplier="147:23" id="8Fk-QJ-W25"/>
+                                            <constraint firstAttribute="width" secondItem="hsO-PZ-UKD" secondAttribute="height" multiplier="10:1" id="gWo-Qb-Jpy"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="VodafoneRg-Regular" family="Vodafone Rg" pointSize="17"/>
+                                        <state key="normal" title="Secondary">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="8Fk-QJ-W25"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="8Fk-QJ-W25"/>
+                                                <exclude reference="gWo-Qb-Jpy"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="VodafoneRg-Regular" family="Vodafone Rg" pointSize="23.5"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="secondaryButtonTapped:" destination="AEJ-5N-YhW" eventType="touchUpInside" id="X2O-6f-Hsr"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ba7-pp-izA" userLabel="Tertiary Button">
+                                        <rect key="frame" x="60" y="280.5" width="203" height="32"/>
+                                        <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Ba7-pp-izA" secondAttribute="height" multiplier="147:23" id="g3Y-1c-xCG"/>
+                                            <constraint firstAttribute="width" secondItem="Ba7-pp-izA" secondAttribute="height" multiplier="10:1" id="gya-lV-oog"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="VodafoneRg-Regular" family="Vodafone Rg" pointSize="17"/>
+                                        <state key="normal" title="Tertiary">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="g3Y-1c-xCG"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="g3Y-1c-xCG"/>
+                                                <exclude reference="gya-lV-oog"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="VodafoneRg-Regular" family="Vodafone Rg" pointSize="23.5"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="tertiaryButtonTapped:" destination="AEJ-5N-YhW" eventType="touchUpInside" id="us0-le-Ebk"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="hsO-PZ-UKD" firstAttribute="leading" secondItem="dgy-Ii-TmN" secondAttribute="leading" id="0Kw-E2-eO8"/>
+                                    <constraint firstItem="pbI-mn-xHq" firstAttribute="centerX" secondItem="L6E-zH-1Mc" secondAttribute="centerX" id="49f-93-SoR"/>
+                                    <constraint firstItem="hsO-PZ-UKD" firstAttribute="top" secondItem="dgy-Ii-TmN" secondAttribute="bottom" constant="15" id="8FV-dB-o6p"/>
+                                    <constraint firstItem="pbI-mn-xHq" firstAttribute="top" secondItem="3Hk-Wt-7IZ" secondAttribute="bottom" constant="8" id="GpR-qb-EYs"/>
+                                    <constraint firstItem="Ba7-pp-izA" firstAttribute="height" secondItem="dgy-Ii-TmN" secondAttribute="height" id="NvN-eq-Pji"/>
+                                    <constraint firstAttribute="trailing" secondItem="dgy-Ii-TmN" secondAttribute="trailing" constant="60" id="RMN-Nz-keB"/>
+                                    <constraint firstItem="dgy-Ii-TmN" firstAttribute="top" secondItem="pbI-mn-xHq" secondAttribute="bottom" constant="23" id="S9E-A0-5Ln"/>
+                                    <constraint firstItem="pbI-mn-xHq" firstAttribute="leading" secondItem="dgy-Ii-TmN" secondAttribute="leading" id="Sma-qt-qur"/>
+                                    <constraint firstItem="3Hk-Wt-7IZ" firstAttribute="centerX" secondItem="L6E-zH-1Mc" secondAttribute="centerX" id="U8o-0G-ASX"/>
+                                    <constraint firstItem="3Hk-Wt-7IZ" firstAttribute="top" secondItem="L6E-zH-1Mc" secondAttribute="topMargin" id="Wrc-zU-9Nz"/>
+                                    <constraint firstItem="hsO-PZ-UKD" firstAttribute="height" secondItem="dgy-Ii-TmN" secondAttribute="height" id="daT-9w-B5p"/>
+                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Ba7-pp-izA" secondAttribute="bottom" constant="20" id="fzb-Gi-6as"/>
+                                    <constraint firstItem="Ba7-pp-izA" firstAttribute="leading" secondItem="hsO-PZ-UKD" secondAttribute="leading" id="huz-ys-zNS"/>
+                                    <constraint firstItem="Ba7-pp-izA" firstAttribute="top" secondItem="hsO-PZ-UKD" secondAttribute="bottom" constant="20" id="mfg-yt-vaf"/>
+                                    <constraint firstItem="pbI-mn-xHq" firstAttribute="trailing" secondItem="dgy-Ii-TmN" secondAttribute="trailing" id="uso-uj-sfN"/>
+                                </constraints>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1dj-wu-z10">
+                                <rect key="frame" x="9" y="123" width="302" height="445"/>
+                                <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WG5-DC-0qs">
+                                <rect key="frame" x="30" y="70" width="260" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="32" id="6PW-uH-mJT">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="40"/>
+                                    </constraint>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="VodafoneRg-Regular" family="Vodafone Rg" pointSize="28"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="VodafoneRg-Regular" family="Vodafone Rg" pointSize="40"/>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9x4-G8-Mha">
+                                <rect key="frame" x="279" y="20" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="9x4-G8-Mha" secondAttribute="height" id="13A-8c-WM4"/>
+                                    <constraint firstAttribute="height" constant="25" id="e8m-H3-K9G">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="44"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="44" id="gAc-VH-WFS"/>
+                                </constraints>
+                                <state key="normal" image="close"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="gAc-VH-WFS"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <exclude reference="13A-8c-WM4"/>
+                                        <include reference="gAc-VH-WFS"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="closeAction:" destination="AEJ-5N-YhW" eventType="touchUpInside" id="DCZ-dZ-3pI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="1dj-wu-z10" firstAttribute="top" secondItem="WG5-DC-0qs" secondAttribute="bottom" constant="20" id="049-Nb-0pN"/>
+                            <constraint firstItem="9x4-G8-Mha" firstAttribute="top" secondItem="VgS-YD-eJ2" secondAttribute="top" constant="20" id="3SF-Un-87t">
+                                <variation key="heightClass=regular-widthClass=regular" constant="33"/>
+                            </constraint>
+                            <constraint firstItem="WG5-DC-0qs" firstAttribute="top" secondItem="NyN-Bi-Fqb" secondAttribute="bottom" constant="50" id="6CF-Li-MnD">
+                                <variation key="heightClass=regular-widthClass=regular" constant="136"/>
+                            </constraint>
+                            <constraint firstItem="1dj-wu-z10" firstAttribute="centerX" secondItem="L6E-zH-1Mc" secondAttribute="centerX" id="G8U-Ro-HsL"/>
+                            <constraint firstAttribute="trailing" secondItem="9x4-G8-Mha" secondAttribute="trailing" constant="16" id="IYY-cZ-pWp"/>
+                            <constraint firstItem="WMF-dK-tkR" firstAttribute="centerX" secondItem="VgS-YD-eJ2" secondAttribute="centerX" id="IuI-3p-mi5"/>
+                            <constraint firstItem="1dj-wu-z10" firstAttribute="leading" secondItem="VgS-YD-eJ2" secondAttribute="leading" constant="9" id="JBL-0s-8OB"/>
+                            <constraint firstItem="6N5-7b-vrt" firstAttribute="width" secondItem="VgS-YD-eJ2" secondAttribute="width" id="JoD-BH-FfR"/>
+                            <constraint firstAttribute="trailing" secondItem="WG5-DC-0qs" secondAttribute="trailing" constant="30" id="OZ8-iq-BXf"/>
+                            <constraint firstItem="6N5-7b-vrt" firstAttribute="centerX" secondItem="VgS-YD-eJ2" secondAttribute="centerX" id="Um2-pv-KvM"/>
+                            <constraint firstAttribute="trailing" secondItem="1dj-wu-z10" secondAttribute="trailing" constant="9" id="Xs7-nK-DWH"/>
+                            <constraint firstItem="L6E-zH-1Mc" firstAttribute="trailing" secondItem="6N5-7b-vrt" secondAttribute="trailing" id="YQG-5I-xgy"/>
+                            <constraint firstItem="WMF-dK-tkR" firstAttribute="centerY" secondItem="VgS-YD-eJ2" secondAttribute="centerY" id="b4V-ZR-V1K"/>
+                            <constraint firstItem="L6E-zH-1Mc" firstAttribute="top" secondItem="WG5-DC-0qs" secondAttribute="bottom" constant="20" id="chP-iM-OKZ"/>
+                            <constraint firstItem="L6E-zH-1Mc" firstAttribute="leading" secondItem="6N5-7b-vrt" secondAttribute="leading" id="cvk-zM-PG7"/>
+                            <constraint firstItem="WMF-dK-tkR" firstAttribute="height" secondItem="VgS-YD-eJ2" secondAttribute="height" id="d6Q-uT-Kaz"/>
+                            <constraint firstItem="38g-El-mUq" firstAttribute="top" secondItem="1dj-wu-z10" secondAttribute="bottom" id="dfa-wu-dOv"/>
+                            <constraint firstItem="WG5-DC-0qs" firstAttribute="leading" secondItem="VgS-YD-eJ2" secondAttribute="leading" constant="30" id="eyh-sP-vab"/>
+                            <constraint firstItem="L6E-zH-1Mc" firstAttribute="centerY" secondItem="6N5-7b-vrt" secondAttribute="centerY" constant="25.5" id="lXv-qZ-pqR"/>
+                            <constraint firstItem="WMF-dK-tkR" firstAttribute="width" secondItem="VgS-YD-eJ2" secondAttribute="width" id="rrp-Nk-M8P"/>
+                            <constraint firstItem="6N5-7b-vrt" firstAttribute="bottom" secondItem="38g-El-mUq" secondAttribute="top" id="yAN-Jk-ktr"/>
+                            <constraint firstAttribute="trailing" secondItem="9x4-G8-Mha" secondAttribute="trailing" constant="53" id="yh7-cb-3gH">
+                                <variation key="heightClass=regular-widthClass=regular" constant="33"/>
+                            </constraint>
+                            <constraint firstItem="6N5-7b-vrt" firstAttribute="top" secondItem="9x4-G8-Mha" secondAttribute="bottom" constant="10" id="zlk-eS-tr0"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="yh7-cb-3gH"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="yh7-cb-3gH"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="closeButton" destination="9x4-G8-Mha" id="biI-rt-z3G"/>
+                        <outlet property="configurableSubview" destination="1dj-wu-z10" id="IaF-WA-2Kn"/>
+                        <outlet property="fadingView" destination="WMF-dK-tkR" id="a2K-LU-D0A"/>
+                        <outlet property="iconImageView" destination="3Hk-Wt-7IZ" id="5D8-S9-9g4"/>
+                        <outlet property="messageLabel" destination="pbI-mn-xHq" id="exw-78-hkJ"/>
+                        <outlet property="primaryButton" destination="dgy-Ii-TmN" id="E3B-OD-7oC"/>
+                        <outlet property="primaryButtonTopConstraint" destination="S9E-A0-5Ln" id="7bA-Kt-Cvk"/>
+                        <outlet property="secondaryButton" destination="hsO-PZ-UKD" id="sR1-Bg-WoK"/>
+                        <outlet property="slidingView" destination="6N5-7b-vrt" id="hjn-o5-RxO"/>
+                        <outlet property="templateAlertContainerView" destination="L6E-zH-1Mc" id="uAc-C1-Dua"/>
+                        <outlet property="tertiaryButton" destination="Ba7-pp-izA" id="aCd-gT-6ii"/>
+                        <outlet property="titleLabel" destination="WG5-DC-0qs" id="uPY-Kd-zet"/>
+                        <outlet property="titleLabelHeightConstriant" destination="6PW-uH-mJT" id="hzu-Oe-bGs"/>
+                        <outlet property="titleLabelTopConstraint" destination="6CF-Li-MnD" id="9Oj-3O-lQl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="th8-Y5-39W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="30" y="-82.394366197183103"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="close" width="64" height="64"/>
+    </resources>
+</document>

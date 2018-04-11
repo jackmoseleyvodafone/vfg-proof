@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VFGCheckBoxView" customModule="VFGCommonUI" customModuleProvider="target">
+            <connections>
+                <outlet property="checkBoxBtn" destination="IRA-7t-2GF" id="5kW-Cr-bfM"/>
+                <outlet property="titleLabel" destination="zbT-P2-pxy" id="3cm-5M-ha2"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="42"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IRA-7t-2GF">
+                    <rect key="frame" x="10" y="8" width="25" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="iGm-aa-T1P"/>
+                        <constraint firstAttribute="width" constant="25" id="p8S-u2-fOa"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="check_off"/>
+                    <state key="selected" backgroundImage="check_on"/>
+                    <connections>
+                        <action selector="checkButtonDidTouchWithSender:" destination="-1" eventType="touchUpInside" id="EP3-fk-cBR"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zbT-P2-pxy">
+                    <rect key="frame" x="43" y="21.5" width="323" height="0.0"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="zbT-P2-pxy" secondAttribute="trailing" constant="9" id="SFE-wW-ao9"/>
+                <constraint firstItem="IRA-7t-2GF" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="f8x-0L-6nG"/>
+                <constraint firstItem="zbT-P2-pxy" firstAttribute="leading" secondItem="IRA-7t-2GF" secondAttribute="trailing" constant="8" id="i92-Ei-gbo"/>
+                <constraint firstItem="IRA-7t-2GF" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="jTg-D6-YyQ"/>
+                <constraint firstItem="zbT-P2-pxy" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="q7L-Lx-IX0"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="5" y="22"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="check_off" width="45" height="46"/>
+        <image name="check_on" width="45" height="45"/>
+    </resources>
+</document>

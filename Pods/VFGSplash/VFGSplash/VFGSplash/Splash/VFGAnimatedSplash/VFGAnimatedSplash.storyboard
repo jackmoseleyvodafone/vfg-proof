@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Animated Splash View Controller-->
+        <scene sceneID="Key-yE-dgr">
+            <objects>
+                <viewController storyboardIdentifier="VFGAnimatedSplashViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="QVH-OF-PqS" customClass="VFGAnimatedSplashViewController" customModule="VFGSplash" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FuW-FN-Xcg"/>
+                        <viewControllerLayoutGuide type="bottom" id="eeV-ZP-atB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="T0p-6q-uWD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tzm-V4-n91">
+                                <rect key="frame" x="37.5" y="183" width="300" height="300"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sgy-fc-Vcj" customClass="LOTAnimationView">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Sgy-fc-Vcj" firstAttribute="top" secondItem="tzm-V4-n91" secondAttribute="top" id="4xX-7n-o1V"/>
+                                    <constraint firstAttribute="trailing" secondItem="Sgy-fc-Vcj" secondAttribute="trailing" id="Pnl-yJ-jlg"/>
+                                    <constraint firstItem="Sgy-fc-Vcj" firstAttribute="leading" secondItem="tzm-V4-n91" secondAttribute="leading" id="hUK-kz-6sD"/>
+                                    <constraint firstAttribute="width" secondItem="tzm-V4-n91" secondAttribute="height" multiplier="1:1" id="nHA-Jp-W1p"/>
+                                    <constraint firstAttribute="bottom" secondItem="Sgy-fc-Vcj" secondAttribute="bottom" id="v0l-eO-BYx"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IjM-c3-mrL">
+                                <rect key="frame" x="32" y="178" width="310" height="310"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="310" id="DSk-dV-Ri8"/>
+                                    <constraint firstAttribute="width" constant="310" id="PSs-i0-LBl"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90196078430000004" green="0.0039215686269999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="tzm-V4-n91" firstAttribute="centerY" secondItem="T0p-6q-uWD" secondAttribute="centerY" id="6yy-Y2-rRL"/>
+                            <constraint firstItem="tzm-V4-n91" firstAttribute="centerX" secondItem="T0p-6q-uWD" secondAttribute="centerX" id="HDb-AX-ZCF"/>
+                            <constraint firstItem="tzm-V4-n91" firstAttribute="width" secondItem="T0p-6q-uWD" secondAttribute="width" multiplier="0.8" id="Ia7-8E-iMv"/>
+                            <constraint firstItem="IjM-c3-mrL" firstAttribute="centerY" secondItem="T0p-6q-uWD" secondAttribute="centerY" id="MLH-jb-zcC"/>
+                            <constraint firstItem="IjM-c3-mrL" firstAttribute="centerX" secondItem="T0p-6q-uWD" secondAttribute="centerX" id="enq-cN-Df2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="circleMask" destination="IjM-c3-mrL" id="6xF-2q-I4w"/>
+                        <outlet property="contentView" destination="tzm-V4-n91" id="XUO-nG-7YX"/>
+                        <outlet property="logoLoadingLottiView" destination="Sgy-fc-Vcj" id="fIO-jw-MNc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VX9-pm-1wF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Dummy Dashboard View Controller-->
+        <scene sceneID="Xl8-iU-usZ">
+            <objects>
+                <viewController storyboardIdentifier="VFGDummyDashboardViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="D6I-T9-PGw" customClass="VFGDummyDashboardViewController" customModule="VFGSplash" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YpI-Ld-qBt"/>
+                        <viewControllerLayoutGuide type="bottom" id="ohW-0s-XZT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lId-nk-Ze5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xiF-aV-mx5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="770" y="137"/>
+        </scene>
+    </scenes>
+</document>

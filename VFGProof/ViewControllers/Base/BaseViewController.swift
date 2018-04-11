@@ -9,27 +9,25 @@
 import UIKit
 
 class BaseViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    // MARK: - Views
+    var _rootView: BaseView?
+    
+    var rootView: BaseView? { return _rootView }
+    
+    // MARK: - View Life Cycle Methods
+    override func loadView() {
+        super.loadView()
+        
+        if let view = self.rootView {
+            self.view = view
+        }
+        
+        loadData()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // MARK: - Data Load
+    func loadData() {
+        
     }
-    */
-
 }

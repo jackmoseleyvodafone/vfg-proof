@@ -1,0 +1,6 @@
+framework module VFGSplash {
+  umbrella header "VFGSplash-umbrella.h"
+
+  export *
+  module * { export * }
+}

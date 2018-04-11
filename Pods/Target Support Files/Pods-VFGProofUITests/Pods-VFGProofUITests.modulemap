@@ -1,0 +1,6 @@
+framework module Pods_VFGProofUITests {
+  umbrella header "Pods-VFGProofUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
