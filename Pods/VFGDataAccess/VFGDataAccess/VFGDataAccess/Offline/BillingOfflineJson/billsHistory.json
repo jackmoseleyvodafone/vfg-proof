@@ -1,0 +1,535 @@
+{
+    "links": {
+        "self": {
+            "href": "https://api.developer.vodafone.com/someplace",
+            "method": "GET"
+        }
+    },
+    "count": 6,
+    "offset": 0,
+    "totalCount": 6,
+    "items": [
+              {
+              "links": {
+              "self": {
+              "href": "https://api.developer.vodafone.com/someplace",
+              "method": "GET"
+              }
+              },
+              "id": "",
+              "type": "bill",
+              "creationDate": "2007-04-05",
+              "dueDate": "2007-06-05",
+              "paymentDate": "",
+              "status": "",
+              "billingCycle": {
+              "billingDate": "2007-04-05",
+              "billingMonth": "04",
+              "billingYear": "2007",
+              "startDate": "2007-03-05",
+              "endDate": "2007-04-05"
+              },
+              "billingAccount": {
+              "links": {
+              "self": {
+              "href": "https://api.developer.vodafone.com/someplace",
+              "method": "GET"
+              }
+              },
+              "id": "",
+              "alias": "",
+              "name": "",
+              "paymentMethod": {
+              "type": ""
+              },
+              "eBilling": {
+              "status": "",
+              "attachPDF": "",
+              "email": {
+              "emailAddress": "",
+              "status": ""
+              },
+              "sms": {
+              "msisdn": "",
+              "status": ""
+              }
+              }
+              },
+              "subscriptions": [
+                                {
+                                "links": {
+                                "self": {
+                                "href": "https://api.developer.vodafone.com/someplace",
+                                "method": "GET"
+                                }
+                                },
+                                "id": "s042",
+                                "name": "string",
+                                "desc": "string",
+                                "type": "mobile-postpaid"
+                                }
+                                ],
+              "billOverview": {
+              "amounts": [
+                          {
+                          "currency": "EUR",
+                          "grossAmountDue": 120,
+                          "type": [
+                                   "total"
+                                   ]
+                          },
+                          {
+                          "currency": "EUR",
+                          "grossAmountDue": 70,
+                          "type": [
+                                   "out-of-plan"
+                                   ]
+                          }
+                          ],
+              "extension": {
+              "es": {},
+              "gr": {
+              "averageMonthlyCharge": 90,
+              "billExcludingPastAmount": 90,
+              "lastOverdueAmount": 30
+              }
+              }
+              }
+              },
+              {
+              "links": {
+              "self": {
+              "href": "https://api.developer.vodafone.com/someplace",
+              "method": "GET"
+              }
+              },
+              "id": "",
+              "type": "bill",
+              "creationDate": "2007-04-05",
+              "dueDate": "2007-06-05",
+              "paymentDate": "",
+              "status": "",
+              "billingCycle": {
+              "billingDate": "2007-04-05",
+              "billingMonth": "05",
+              "billingYear": "2007",
+              "startDate": "2007-04-05",
+              "endDate": "2007-05-05"
+              },
+              "billingAccount": {
+              "links": {
+              "self": {
+              "href": "https://api.developer.vodafone.com/someplace",
+              "method": "GET"
+              }
+              },
+              "id": "",
+              "alias": "",
+              "name": "",
+              "paymentMethod": {
+              "type": ""
+              },
+              "eBilling": {
+              "status": "",
+              "attachPDF": "",
+              "email": {
+              "emailAddress": "",
+              "status": ""
+              },
+              "sms": {
+              "msisdn": "",
+              "status": ""
+              }
+              }
+              },
+              "subscriptions": [
+                                {
+                                "links": {
+                                "self": {
+                                "href": "https://api.developer.vodafone.com/someplace",
+                                "method": "GET"
+                                }
+                                },
+                                "id": "s042",
+                                "name": "string",
+                                "desc": "string",
+                                "type": "mobile-postpaid"
+                                }
+                                ],
+              "billOverview": {
+              "amounts": [
+                          {
+                          "currency": "EUR",
+                          "grossAmountDue": 120,
+                          "type": [
+                                   "total"
+                                   ]
+                          },
+                          {
+                          "currency": "EUR",
+                          "grossAmountDue": 70,
+                          "type": [
+                                   "out-of-plan"
+                                   ]
+                          }
+                          ],
+              "extension": {
+              "es": {},
+              "gr": {
+              "averageMonthlyCharge": 90,
+              "billExcludingPastAmount": 90,
+              "lastOverdueAmount": 30
+              }
+              }
+              }
+              },
+              {
+              "links": {
+              "self": {
+              "href": "https://api.developer.vodafone.com/someplace",
+              "method": "GET"
+              }
+              },
+              "id": "",
+              "type": "bill",
+              "creationDate": "2007-04-05",
+              "dueDate": "2007-06-05",
+              "paymentDate": "",
+              "status": "",
+              "billingCycle": {
+              "billingDate": "2007-06-06",
+              "billingMonth": "06",
+              "billingYear": "2007",
+              "startDate": "2007-05-05",
+              "endDate": "2007-06-05"
+              },
+              "billingAccount": {
+              "links": {
+              "self": {
+              "href": "https://api.developer.vodafone.com/someplace",
+              "method": "GET"
+              }
+              },
+              "id": "",
+              "alias": "",
+              "name": "",
+              "paymentMethod": {
+              "type": ""
+              },
+              "eBilling": {
+              "status": "",
+              "attachPDF": "",
+              "email": {
+              "emailAddress": "",
+              "status": ""
+              },
+              "sms": {
+              "msisdn": "",
+              "status": ""
+              }
+              }
+              },
+              "subscriptions": [
+                                {
+                                "links": {
+                                "self": {
+                                "href": "https://api.developer.vodafone.com/someplace",
+                                "method": "GET"
+                                }
+                                },
+                                "id": "s042",
+                                "name": "string",
+                                "desc": "string",
+                                "type": "mobile-postpaid"
+                                }
+                                ],
+              "billOverview": {
+              "amounts": [
+                          {
+                          "currency": "EUR",
+                          "grossAmountDue": 120,
+                          "type": [
+                                   "total"
+                                   ]
+                          },
+                          {
+                          "currency": "EUR",
+                          "grossAmountDue": 70,
+                          "type": [
+                                   "out-of-plan"
+                                   ]
+                          }
+                          ],
+              "extension": {
+              "es": {},
+              "gr": {
+              "averageMonthlyCharge": 90,
+              "billExcludingPastAmount": 90,
+              "lastOverdueAmount": 30
+              }
+              }
+              }
+              },
+              {
+              "links": {
+              "self": {
+              "href": "https://api.developer.vodafone.com/someplace",
+              "method": "GET"
+              }
+              },
+              "id": "",
+              "type": "bill",
+              "creationDate": "2007-04-05",
+              "dueDate": "2007-06-05",
+              "paymentDate": "",
+              "status": "",
+              "billingCycle": {
+              "billingDate": "2007-07-06",
+              "billingMonth": "07",
+              "billingYear": "2007",
+              "startDate": "2007-06-05",
+              "endDate": "2007-07-05"
+              },
+              "billingAccount": {
+              "links": {
+              "self": {
+              "href": "https://api.developer.vodafone.com/someplace",
+              "method": "GET"
+              }
+              },
+              "id": "",
+              "alias": "",
+              "name": "",
+              "paymentMethod": {
+              "type": ""
+              },
+              "eBilling": {
+              "status": "",
+              "attachPDF": "",
+              "email": {
+              "emailAddress": "",
+              "status": ""
+              },
+              "sms": {
+              "msisdn": "",
+              "status": ""
+              }
+              }
+              },
+              "subscriptions": [
+                                {
+                                "links": {
+                                "self": {
+                                "href": "https://api.developer.vodafone.com/someplace",
+                                "method": "GET"
+                                }
+                                },
+                                "id": "s042",
+                                "name": "string",
+                                "desc": "string",
+                                "type": "mobile-postpaid"
+                                }
+                                ],
+              "billOverview": {
+              "amounts": [
+                          {
+                          "currency": "EUR",
+                          "grossAmountDue": 120,
+                          "type": [
+                                   "total"
+                                   ]
+                          },
+                          {
+                          "currency": "EUR",
+                          "grossAmountDue": 70,
+                          "type": [
+                                   "out-of-plan"
+                                   ]
+                          }
+                          ],
+              "extension": {
+              "es": {},
+              "gr": {
+              "averageMonthlyCharge": 90,
+              "billExcludingPastAmount": 90,
+              "lastOverdueAmount": 30
+              }
+              }
+              }
+              },
+              {
+              "links": {
+              "self": {
+              "href": "https://api.developer.vodafone.com/someplace",
+              "method": "GET"
+              }
+              },
+              "id": "",
+              "type": "bill",
+              "creationDate": "2007-04-05",
+              "dueDate": "2007-06-05",
+              "paymentDate": "",
+              "status": "",
+              "billingCycle": {
+              "billingDate": "2007-08-06",
+              "billingMonth": "08",
+              "billingYear": "2007",
+              "startDate": "2007-07-05",
+              "endDate": "2007-08-05"
+              },
+              "billingAccount": {
+              "links": {
+              "self": {
+              "href": "https://api.developer.vodafone.com/someplace",
+              "method": "GET"
+              }
+              },
+              "id": "",
+              "alias": "",
+              "name": "",
+              "paymentMethod": {
+              "type": ""
+              },
+              "eBilling": {
+              "status": "",
+              "attachPDF": "",
+              "email": {
+              "emailAddress": "",
+              "status": ""
+              },
+              "sms": {
+              "msisdn": "",
+              "status": ""
+              }
+              }
+              },
+              "subscriptions": [
+                                {
+                                "links": {
+                                "self": {
+                                "href": "https://api.developer.vodafone.com/someplace",
+                                "method": "GET"
+                                }
+                                },
+                                "id": "s042",
+                                "name": "string",
+                                "desc": "string",
+                                "type": "mobile-postpaid"
+                                }
+                                ],
+              "billOverview": {
+              "amounts": [
+                          {
+                          "currency": "EUR",
+                          "grossAmountDue": 50,
+                          "type": [
+                                   "total"
+                                   ]
+                          },
+                          {
+                          "currency": "EUR",
+                          "grossAmountDue": 0,
+                          "type": [
+                                   "out-of-plan"
+                                   ]
+                          }
+                          ],
+              "extension": {
+              "es": {},
+              "gr": {
+              "averageMonthlyCharge": 50,
+              "billExcludingPastAmount": 50,
+              "lastOverdueAmount": 30
+              }
+              }
+              }
+              },
+              {
+              "links": {
+              "self": {
+              "href": "https://api.developer.vodafone.com/someplace",
+              "method": "GET"
+              }
+              },
+              "id": "",
+              "type": "bill",
+              "creationDate": "2007-04-05",
+              "dueDate": "2007-06-05",
+              "paymentDate": "",
+              "status": "",
+              "billingCycle": {
+              "billingDate": "2007-09-06",
+              "billingMonth": "09",
+              "billingYear": "2007",
+              "startDate": "2007-08-05",
+              "endDate": "2007-09-05"
+              },
+              "billingAccount": {
+              "links": {
+              "self": {
+              "href": "https://api.developer.vodafone.com/someplace",
+              "method": "GET"
+              }
+              },
+              "id": "",
+              "alias": "",
+              "name": "",
+              "paymentMethod": {
+              "type": ""
+              },
+              "eBilling": {
+              "status": "",
+              "attachPDF": "",
+              "email": {
+              "emailAddress": "",
+              "status": ""
+              },
+              "sms": {
+              "msisdn": "",
+              "status": ""
+              }
+              }
+              },
+              "subscriptions": [
+                                {
+                                "links": {
+                                "self": {
+                                "href": "https://api.developer.vodafone.com/someplace",
+                                "method": "GET"
+                                }
+                                },
+                                "id": "s042",
+                                "name": "string",
+                                "desc": "string",
+                                "type": "mobile-postpaid"
+                                }
+                                ],
+              "billOverview": {
+              "amounts": [
+                          {
+                          "currency": "EUR",
+                          "grossAmountDue": 60,
+                          "type": [
+                                   "total"
+                                   ]
+                          },
+                          {
+                          "currency": "EUR",
+                          "grossAmountDue": 0,
+                          "type": [
+                                   "out-of-plan"
+                                   ]
+                          }
+                          ],
+              "extension": {
+              "es": {},
+              "gr": {
+              "averageMonthlyCharge": 60,
+              "billExcludingPastAmount": 60,
+              "lastOverdueAmount": 30
+              }
+              }
+              }
+              }
+              ]
+}

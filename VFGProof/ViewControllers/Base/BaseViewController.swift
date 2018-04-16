@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import VFGCommonUI
 
 class BaseViewController: UIViewController {
     

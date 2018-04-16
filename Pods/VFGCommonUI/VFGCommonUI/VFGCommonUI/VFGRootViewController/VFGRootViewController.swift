@@ -19,7 +19,7 @@ public enum BubbleColor {
     case white
 }
 
-public class VFGRootViewController: UIViewController {
+open class VFGRootViewController: UIViewController {
     
     // MARK: - Public Instance Variables
     
@@ -243,7 +243,7 @@ public class VFGRootViewController: UIViewController {
         }
     }
     
-    override public func viewDidLoad() {
+    override open func viewDidLoad() {
         super.viewDidLoad()
         self.nudgeView.isHidden = true
         self.blackOverlayView.backgroundColor = UIColor.black.withAlphaComponent(0.5)
@@ -253,7 +253,7 @@ public class VFGRootViewController: UIViewController {
         self.setupTopBarManager()
     }
     
-    public override func viewDidLayoutSubviews() {
+    open override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         if !self.topBarTransitionInProgress {
             self.currentTopBarScrollDelegate.refresh()
@@ -277,12 +277,12 @@ public class VFGRootViewController: UIViewController {
         }
     }
     
-    public override func viewWillAppear(_ animated: Bool) {
+    open override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
     }
     
-    public override func viewDidAppear(_ animated: Bool) {
+    open override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         if self.containerNavigationController.viewControllers.count > 1{
             self.currentTopBarScrollDelegate.didScroll(withOffset: 0.1)
@@ -290,7 +290,7 @@ public class VFGRootViewController: UIViewController {
         self.currentTopBarScrollDelegate.refresh()
         
     }
-    override public func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    override open func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == VFGRootViewController.embedSegue {
             
             guard let destinationViewController : VFGNavigationController = segue.destination as? VFGNavigationController else {

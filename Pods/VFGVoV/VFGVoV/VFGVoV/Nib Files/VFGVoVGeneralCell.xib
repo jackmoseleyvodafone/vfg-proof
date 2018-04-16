@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="ipad9_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="vodafone-regular.ttf">
+            <string>VodafoneRg-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VFGVoVGeneralCell" customModule="VFGVoV" customModuleProvider="target">
+            <connections>
+                <outlet property="bodyLabel" destination="QKp-sp-S9A" id="FjA-0j-BbV"/>
+                <outlet property="containerView" destination="Nuq-eq-uyw" id="CBu-Bd-tS1"/>
+                <outlet property="leftButton" destination="fZh-fS-qVG" id="iFJ-Wl-hXS"/>
+                <outlet property="rightButton" destination="uxd-cv-217" id="n3o-8f-sXO"/>
+                <outlet property="titleLabel" destination="BoK-e6-DN7" id="J66-0J-EpM"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nuq-eq-uyw">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="243"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0mw-sF-jHX">
+                    <rect key="frame" x="100" y="0.0" width="175" height="242"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="25"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalCompressionResistancePriority="749" layoutMarginsFollowReadableWidth="YES" text="Avoid overspeding Avoid overspeding Avoid overspeding Avoid overspeding" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BoK-e6-DN7">
+                    <rect key="frame" x="135" y="29" width="105" height="39"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" name="VodafoneRg-Regular" family="Vodafone Rg" pointSize="24"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="heightClass=regular-widthClass=regular">
+                        <fontDescription key="fontDescription" name="VodafoneRg-Regular" family="Vodafone Rg" pointSize="26"/>
+                    </variation>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="249" layoutMarginsFollowReadableWidth="YES" text="Avoid overspeding set a  " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QKp-sp-S9A">
+                    <rect key="frame" x="135" y="73" width="105" height="71"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" name="VodafoneRg-Regular" family="Vodafone Rg" pointSize="16"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="heightClass=regular-widthClass=regular">
+                        <fontDescription key="fontDescription" name="VodafoneRg-Regular" family="Vodafone Rg" pointSize="20"/>
+                    </variation>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fZh-fS-qVG">
+                    <rect key="frame" x="135" y="158" width="47.5" height="45"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="y69-Ix-mb5">
+                            <variation key="heightClass=regular-widthClass=regular" constant="45"/>
+                        </constraint>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="VodafoneRg-Regular" family="Vodafone Rg" pointSize="16"/>
+                    <state key="normal" title="Yes please">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                            <integer key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <variation key="heightClass=regular-widthClass=regular">
+                        <fontDescription key="fontDescription" name="VodafoneRg-Regular" family="Vodafone Rg" pointSize="20"/>
+                    </variation>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uxd-cv-217">
+                    <rect key="frame" x="192.5" y="158" width="47.5" height="45"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" name="VodafoneRg-Regular" family="Vodafone Rg" pointSize="16"/>
+                    <state key="normal" title="No thanks">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <variation key="heightClass=regular-widthClass=regular">
+                        <fontDescription key="fontDescription" name="VodafoneRg-Regular" family="Vodafone Rg" pointSize="20"/>
+                    </variation>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="speechCorner" translatesAutoresizingMaskIntoConstraints="NO" id="oT4-ak-JMP">
+                    <rect key="frame" x="186" y="218" width="50" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="12" id="usk-bq-cGj">
+                            <variation key="heightClass=regular-widthClass=regular" constant="24"/>
+                        </constraint>
+                        <constraint firstAttribute="width" constant="26" id="veT-53-VIa">
+                            <variation key="heightClass=regular-widthClass=regular" constant="50"/>
+                        </constraint>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="oT4-ak-JMP" firstAttribute="top" secondItem="0mw-sF-jHX" secondAttribute="bottom" constant="-2" id="5R7-UC-EGm">
+                    <variation key="heightClass=regular-widthClass=regular" constant="-24"/>
+                </constraint>
+                <constraint firstAttribute="trailing" secondItem="QKp-sp-S9A" secondAttribute="trailing" constant="50" id="5ZV-dg-WVc">
+                    <variation key="heightClass=regular-widthClass=regular" constant="135"/>
+                </constraint>
+                <constraint firstAttribute="trailing" secondItem="uxd-cv-217" secondAttribute="trailing" constant="50" id="7wp-4g-6S2">
+                    <variation key="heightClass=regular-widthClass=regular" constant="135"/>
+                </constraint>
+                <constraint firstItem="uxd-cv-217" firstAttribute="centerY" secondItem="fZh-fS-qVG" secondAttribute="centerY" id="8qP-gG-Y5Z"/>
+                <constraint firstItem="BoK-e6-DN7" firstAttribute="leading" secondItem="Nuq-eq-uyw" secondAttribute="leading" constant="50" id="EhJ-op-LUJ">
+                    <variation key="heightClass=regular-widthClass=regular" constant="135"/>
+                </constraint>
+                <constraint firstAttribute="width" constant="375" id="IHN-gZ-R3a"/>
+                <constraint firstItem="0mw-sF-jHX" firstAttribute="leading" secondItem="Nuq-eq-uyw" secondAttribute="leading" constant="25" id="LYa-7v-S3A">
+                    <variation key="heightClass=regular-widthClass=regular" constant="100"/>
+                </constraint>
+                <constraint firstItem="oT4-ak-JMP" firstAttribute="trailing" secondItem="uxd-cv-217" secondAttribute="trailing" constant="-4" id="PTk-uM-fKw"/>
+                <constraint firstItem="uxd-cv-217" firstAttribute="width" secondItem="fZh-fS-qVG" secondAttribute="width" id="QCL-ih-3oD"/>
+                <constraint firstItem="fZh-fS-qVG" firstAttribute="top" secondItem="QKp-sp-S9A" secondAttribute="bottom" constant="14" id="RsO-bj-i8w">
+                    <variation key="heightClass=regular-widthClass=regular" constant="14"/>
+                </constraint>
+                <constraint firstItem="BoK-e6-DN7" firstAttribute="top" secondItem="Nuq-eq-uyw" secondAttribute="top" constant="14" id="TAS-Pu-l58">
+                    <variation key="heightClass=regular-widthClass=regular" constant="29"/>
+                </constraint>
+                <constraint firstItem="fZh-fS-qVG" firstAttribute="top" secondItem="0mw-sF-jHX" secondAttribute="bottom" constant="-54" id="XBm-Wo-FrQ">
+                    <variation key="heightClass=regular-widthClass=regular" constant="-84"/>
+                </constraint>
+                <constraint firstItem="uxd-cv-217" firstAttribute="height" secondItem="fZh-fS-qVG" secondAttribute="height" id="XNd-kd-gSL"/>
+                <constraint firstItem="fZh-fS-qVG" firstAttribute="leading" secondItem="Nuq-eq-uyw" secondAttribute="leading" constant="50" id="YTh-mO-yv8">
+                    <variation key="heightClass=regular-widthClass=regular" constant="135"/>
+                </constraint>
+                <constraint firstItem="0mw-sF-jHX" firstAttribute="top" secondItem="Nuq-eq-uyw" secondAttribute="top" id="dRP-gt-XYa"/>
+                <constraint firstItem="QKp-sp-S9A" firstAttribute="leading" secondItem="Nuq-eq-uyw" secondAttribute="leading" constant="50" id="g0t-Ls-6rK">
+                    <variation key="heightClass=regular-widthClass=regular" constant="135"/>
+                </constraint>
+                <constraint firstAttribute="trailing" secondItem="0mw-sF-jHX" secondAttribute="trailing" constant="25" id="kZe-Io-Ybu">
+                    <variation key="heightClass=regular-widthClass=regular" constant="100"/>
+                </constraint>
+                <constraint firstItem="QKp-sp-S9A" firstAttribute="top" secondItem="BoK-e6-DN7" secondAttribute="bottom" constant="5" id="mNP-Ua-8T6">
+                    <variation key="heightClass=regular-widthClass=regular" constant="5"/>
+                </constraint>
+                <constraint firstItem="uxd-cv-217" firstAttribute="leading" secondItem="fZh-fS-qVG" secondAttribute="trailing" constant="10" id="pTp-kB-53v"/>
+                <constraint firstAttribute="bottom" secondItem="0mw-sF-jHX" secondAttribute="bottom" constant="1" id="paT-1E-Nn1"/>
+                <constraint firstAttribute="trailing" secondItem="BoK-e6-DN7" secondAttribute="trailing" constant="50" id="sQb-VR-F9V">
+                    <variation key="heightClass=regular-widthClass=regular" constant="135"/>
+                </constraint>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="135.5" y="188.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="speechCorner" width="26" height="12"/>
+    </resources>
+</document>

@@ -9,18 +9,21 @@
 import UIKit
 import CoreData
 import VFGSplash
+import VFGCommonUI
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     // Properties
     
+    private static let rootViewControllerStoryboardName = "VFGRootViewControllerStoryboard"
+    private static let rootViewControllerStoryboardId = "VFGRootViewController"
     var window: UIWindow?
 
     private lazy var navigationController: UINavigationController = {
         let navigationController: UINavigationController = UINavigationController()
         
-        navigationController.viewControllers = [MainViewController()]
+        navigationController.viewControllers = [SplashViewController()]
         navigationController.setNavigationBarHidden(true, animated: false)
         
         return navigationController

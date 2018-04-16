@@ -11,6 +11,7 @@ target 'VFGProof' do
   # Pods for VFGProof
   
   pod 'VFGSplash', '0.0.1'
+  pod 'VFGVoV', '0.0.1'
 
   target 'VFGProofTests' do
     inherit! :search_paths

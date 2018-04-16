@@ -134,23 +134,35 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Cache/Cache.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/EDSunriseSet/EDSunriseSet.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/PureLayout/PureLayout.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/RBBAnimation/RBBAnimation.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SwiftHash/SwiftHash.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/VFGCommonUI/VFGCommonUI.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/VFGCommonUtils/VFGCommonUtils.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/VFGDataAccess/VFGDataAccess.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/VFGSplash/VFGSplash.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/VFGVoV/VFGVoV.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Cache/Cache.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/EDSunriseSet/EDSunriseSet.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/PureLayout/PureLayout.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/RBBAnimation/RBBAnimation.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SwiftHash/SwiftHash.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/VFGCommonUI/VFGCommonUI.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/VFGCommonUtils/VFGCommonUtils.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/VFGDataAccess/VFGDataAccess.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/VFGSplash/VFGSplash.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/VFGVoV/VFGVoV.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then

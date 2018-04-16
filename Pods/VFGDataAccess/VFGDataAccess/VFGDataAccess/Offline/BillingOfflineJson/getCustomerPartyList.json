@@ -1,0 +1,53 @@
+{
+        "serviceName": "CustomerPartyList",
+        "parts": {
+            "serviceName": "CustomerPartyList",
+            "individual": {
+                "name": "Alice John ",
+                "first_name": "Alice",
+                "middle_name": null,
+                "middle_initial": null,
+                "family_name": "John ",
+                "formatted_name": null,
+                "tariff_name": "Vodafone RED VitaMAX",
+                "account_number": "1234323",
+                "subscriber_id": "32455",
+                "account_type": "PAYM",
+                "billCycle": "30",
+                "msisdn": "44444444",
+                "username": "alice",
+                "email": "alice@vodafone.com",
+                "childs": [{
+                    "name": "Manar",
+                    "first_name": "Alice",
+                    "middle_name": null,
+                    "middle_initial": null,
+                    "family_name": "John ",
+                    "formatted_name": null,
+                    "tariff_name": "Vodafone RED VitaMAX",
+                    "account_number": "1234323",
+                    "subscriber_id": "32455",
+                    "account_type": "PAYM",
+                    "billCycle": "30",
+                    "msisdn": "44444444",
+                    "username": "alice",
+                    "email": "alice@vodafone.com"
+                }, {
+                    "name": "Magdi",
+                    "first_name": "Alice",
+                    "middle_name": null,
+                    "middle_initial": null,
+                    "family_name": "John ",
+                    "formatted_name": null,
+                    "tariff_name": "Vodafone RED VitaMAX",
+                    "account_number": "1234323",
+                    "subscriber_id": "32455",
+                    "account_type": "PAYG",
+                    "billCycle": "30",
+                    "msisdn": "44444444",
+                    "username": "alice",
+                    "email": "alice@vodafone.com"
+                }]
+            }
+        }
+    }

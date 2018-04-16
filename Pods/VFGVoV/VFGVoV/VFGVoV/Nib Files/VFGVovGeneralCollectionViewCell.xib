@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="ipad9_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Vodafone-Rg.ttf">
+            <string>VodafoneRg-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="VFGVovGeneralCollectionViewCellId" reuseIdentifier="VFGVovGeneralCollectionViewCellId" id="ESJ-oA-5Hc" customClass="VFGVovGeneralCollectionViewCell" customModule="VFGVoV" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="183"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="183"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="J7K-4I-q5S">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="183"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pin-jr-hX5">
+                                <rect key="frame" x="25" y="0.0" width="325" height="183"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="94r-iN-keK">
+                                <rect key="frame" x="50" y="24" width="275" height="92"/>
+                                <string key="text">Alice, you’re offline\rThere\'s no connection on your phone. You can still use the app but some screens won\'t be up to date. Alice, you’re offline\rThere\'s no connection on your phone. You can still use the app but some screens won\'t be up to date.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ajS-r2-9Ig">
+                                <rect key="frame" x="50" y="121" width="133" height="35"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="VodafoneRg-Regular" family="Vodafone Rg" pointSize="16"/>
+                                <state key="normal" title="Yes please">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="VodafoneRg-Regular" family="Vodafone Rg" pointSize="20"/>
+                                </variation>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="speechCorner" translatesAutoresizingMaskIntoConstraints="NO" id="nl4-iC-zTS">
+                                <rect key="frame" x="285" y="181" width="40" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="12" id="3lP-Sb-Rmt">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="16"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="26" id="iZ5-EL-ptS">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="40"/>
+                                    </constraint>
+                                </constraints>
+                                <variation key="heightClass=regular-widthClass=regular" image="speechCorner_iPad"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X9U-1E-woG">
+                                <rect key="frame" x="192" y="121" width="133" height="35"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="VodafoneRg-Regular" family="Vodafone Rg" pointSize="16"/>
+                                <state key="normal" title="No thanks">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="VodafoneRg-Regular" family="Vodafone Rg" pointSize="20"/>
+                                </variation>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Pin-jr-hX5" firstAttribute="leading" secondItem="J7K-4I-q5S" secondAttribute="leading" constant="25" id="4Sx-Lc-F6p">
+                                <variation key="heightClass=regular-widthClass=regular" constant="25"/>
+                            </constraint>
+                            <constraint firstItem="X9U-1E-woG" firstAttribute="trailing" secondItem="94r-iN-keK" secondAttribute="trailing" id="4cd-bf-fBG"/>
+                            <constraint firstItem="X9U-1E-woG" firstAttribute="height" secondItem="ajS-r2-9Ig" secondAttribute="height" id="BW5-UC-Nr3"/>
+                            <constraint firstAttribute="bottom" secondItem="Pin-jr-hX5" secondAttribute="bottom" id="H7j-eh-CJ1"/>
+                            <constraint firstItem="nl4-iC-zTS" firstAttribute="top" secondItem="ajS-r2-9Ig" secondAttribute="bottom" constant="25" id="HGj-Mv-koi"/>
+                            <constraint firstAttribute="width" constant="375" id="Mu3-V2-num"/>
+                            <constraint firstItem="94r-iN-keK" firstAttribute="top" secondItem="Pin-jr-hX5" secondAttribute="top" constant="24" id="VKs-pP-k2p"/>
+                            <constraint firstItem="X9U-1E-woG" firstAttribute="width" secondItem="ajS-r2-9Ig" secondAttribute="width" id="bgA-Rp-sNL"/>
+                            <constraint firstItem="Pin-jr-hX5" firstAttribute="trailing" secondItem="94r-iN-keK" secondAttribute="trailing" constant="25" id="hue-5B-z0X"/>
+                            <constraint firstItem="nl4-iC-zTS" firstAttribute="trailing" secondItem="X9U-1E-woG" secondAttribute="trailing" id="mwB-1G-xUH"/>
+                            <constraint firstItem="nl4-iC-zTS" firstAttribute="top" secondItem="Pin-jr-hX5" secondAttribute="bottom" constant="-2" id="n58-7r-bDG">
+                                <variation key="heightClass=regular-widthClass=regular" constant="-2"/>
+                            </constraint>
+                            <constraint firstItem="ajS-r2-9Ig" firstAttribute="leading" secondItem="94r-iN-keK" secondAttribute="leading" id="nMY-aX-i2S"/>
+                            <constraint firstItem="94r-iN-keK" firstAttribute="leading" secondItem="Pin-jr-hX5" secondAttribute="leading" constant="25" id="oNw-4n-dGf"/>
+                            <constraint firstAttribute="trailing" secondItem="Pin-jr-hX5" secondAttribute="trailing" constant="25" id="ojE-DY-kh1"/>
+                            <constraint firstItem="X9U-1E-woG" firstAttribute="top" secondItem="ajS-r2-9Ig" secondAttribute="top" id="piy-e0-JDC"/>
+                            <constraint firstItem="X9U-1E-woG" firstAttribute="leading" secondItem="ajS-r2-9Ig" secondAttribute="trailing" constant="9" id="uWR-cQ-nk2"/>
+                            <constraint firstItem="Pin-jr-hX5" firstAttribute="top" secondItem="J7K-4I-q5S" secondAttribute="top" id="yFv-ru-xFt"/>
+                            <constraint firstItem="94r-iN-keK" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="ajS-r2-9Ig" secondAttribute="top" constant="-5" id="zQg-FH-XUq"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="J7K-4I-q5S" firstAttribute="top" secondItem="ESJ-oA-5Hc" secondAttribute="top" id="1fM-c3-Ii1"/>
+                <constraint firstItem="J7K-4I-q5S" firstAttribute="leading" secondItem="ESJ-oA-5Hc" secondAttribute="leading" id="2qZ-bR-8R3"/>
+                <constraint firstAttribute="trailing" secondItem="J7K-4I-q5S" secondAttribute="trailing" id="5Pw-a6-ZFH"/>
+                <constraint firstAttribute="bottom" secondItem="J7K-4I-q5S" secondAttribute="bottom" id="Noi-zY-JeH"/>
+            </constraints>
+            <size key="customSize" width="50" height="45"/>
+            <connections>
+                <outlet property="containerView" destination="J7K-4I-q5S" id="RXf-AR-9Pb"/>
+                <outlet property="layoutWidth" destination="Mu3-V2-num" id="kuI-M6-Pzm"/>
+                <outlet property="leftButton" destination="ajS-r2-9Ig" id="LV8-cC-hCM"/>
+                <outlet property="rightButton" destination="X9U-1E-woG" id="B1y-Il-vOq"/>
+                <outlet property="titleLabel" destination="94r-iN-keK" id="xyI-Uj-5CR"/>
+            </connections>
+            <point key="canvasLocation" x="-125.5" y="-271"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="speechCorner" width="26" height="12"/>
+        <image name="speechCorner_iPad" width="41" height="14"/>
+    </resources>
+</document>

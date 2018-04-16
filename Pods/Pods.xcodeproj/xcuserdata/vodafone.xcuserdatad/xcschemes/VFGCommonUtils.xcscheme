@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "08F3380629CA9ED13B73A5F63330D243"
+               BlueprintIdentifier = "EFB99088857051B2853C1EEAA0D1BB1B"
                BlueprintName = "VFGCommonUtils"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "VFGCommonUtils.framework">

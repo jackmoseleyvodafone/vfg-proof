@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  VFGProof
+
+  Created by vodafone on 16/04/2018.
+  Copyright © 2018 vodafone. All rights reserved.
+*/
+
+"good_morning" = "Good Morning";
+"good_afternoon" = "Good Afternoon";
+"good_evening" = "Good Evening";
+"welcome_to" = "Welcome to ";

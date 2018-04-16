@@ -1,0 +1,6 @@
+framework module VFGDataAccess {
+  umbrella header "VFGDataAccess-umbrella.h"
+
+  export *
+  module * { export * }
+}

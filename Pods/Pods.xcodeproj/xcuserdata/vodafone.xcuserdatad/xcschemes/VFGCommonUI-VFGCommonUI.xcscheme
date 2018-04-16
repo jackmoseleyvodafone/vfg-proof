@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F6676A54E4298D528A22426E595BAC76"
+               BlueprintIdentifier = "6F648F33ECF1ACEFFF28E4189DCB4182"
                BuildableName = "VFGCommonUI.bundle"
                BlueprintName = "VFGCommonUI-VFGCommonUI"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -26,6 +26,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
@@ -36,6 +37,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      language = ""
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
@@ -45,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F6676A54E4298D528A22426E595BAC76"
+            BlueprintIdentifier = "6F648F33ECF1ACEFFF28E4189DCB4182"
             BuildableName = "VFGCommonUI.bundle"
             BlueprintName = "VFGCommonUI-VFGCommonUI"
             ReferencedContainer = "container:Pods.xcodeproj">

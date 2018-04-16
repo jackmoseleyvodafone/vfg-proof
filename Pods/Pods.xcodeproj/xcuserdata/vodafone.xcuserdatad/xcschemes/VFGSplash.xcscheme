@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F47D44AED2DEB8B45451C2D6F94AE159"
+               BlueprintIdentifier = "5126A00C40937A87BE0611A8B35A295B"
                BlueprintName = "VFGSplash"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "VFGSplash.framework">

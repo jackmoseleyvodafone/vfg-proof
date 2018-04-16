@@ -10,10 +10,18 @@ import UIKit
 
 class BaseView: UIView {
     
-    // MARK: Init Methods
+    // MARK: - Properties
+    
+    var _coder: NSCoder?
+    
+    var coder: NSCoder? { return _coder }
+    
+    // MARK: - Init Methods
     
     convenience init() {
         self.init(frame: CGRect.zero)
+        
+        self.translatesAutoresizingMaskIntoConstraints = false
         
         setupSubviews()
         setupAutolayout()
@@ -27,7 +35,7 @@ class BaseView: UIView {
         super.init(frame: frame)
     }
     
-    // MARK: View Setup
+    // MARK: - View Setup
     
     func setupSubviews() {
         

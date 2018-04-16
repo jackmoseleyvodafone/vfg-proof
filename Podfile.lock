@@ -1,8 +1,13 @@
 PODS:
+  - Alamofire (4.7.1)
+  - Cache (3.3.0):
+    - SwiftHash (~> 1.4.0)
   - EDSunriseSet (1.0)
   - lottie-ios (2.5.0)
+  - ObjectMapper (2.2.9)
   - PureLayout (3.0.2)
   - RBBAnimation (0.4.0)
+  - SwiftHash (1.4.0)
   - SwiftMessages (4.1.2)
   - VFGCommonUI (0.0.1):
     - lottie-ios
@@ -12,22 +17,39 @@ PODS:
     - VFGCommonUtils (= 0.0.1)
   - VFGCommonUtils (0.0.1):
     - EDSunriseSet
+  - VFGDataAccess (0.0.1):
+    - Alamofire (~> 4.4)
+    - Cache (= 3.3.0)
+    - ObjectMapper (~> 2.2.6)
+    - VFGCommonUI
+    - VFGCommonUtils
   - VFGSplash (0.0.1):
     - VFGCommonUI (= 0.0.1)
+  - VFGVoV (0.0.1):
+    - VFGCommonUI (= 0.0.1)
+    - VFGCommonUtils (= 0.0.1)
+    - VFGDataAccess (= 0.0.1)
 
 DEPENDENCIES:
   - VFGSplash (= 0.0.1)
+  - VFGVoV (= 0.0.1)
 
 SPEC CHECKSUMS:
+  Alamofire: 68d7d521118d49c615a8d2214d87cdf525599d30
+  Cache: 871805a8a7268feac34f5c10c54506801f0bd4cd
   EDSunriseSet: bdc4760f496c8e6f9b9a727ffa645b6048aa2a09
   lottie-ios: d699fdee68d7b63e721d949388b015fef1aaa4ac
+  ObjectMapper: 63cfe41bc6f8e7c8f44344c49901b8ae7de14c52
   PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
   RBBAnimation: 4b2d66f6d993febce63cd564da934985313b9c59
+  SwiftHash: acf0f29032309a5c7a7f625595eade1aca97aca2
   SwiftMessages: d81f48c1f8b6bc1dbebdfffe11226f0344f937ca
   VFGCommonUI: 46acec6b6405f140d257db057ea60ed02830bc97
   VFGCommonUtils: 1e5cfa33ca0154637c5623ba6e5e96043348f611
+  VFGDataAccess: 320d8170bc74a3e7e558dbb5d76f4a81133b61a1
   VFGSplash: 1f4b68ce07ee94c32ad5c3f4d66de5d5247223bf
+  VFGVoV: fefbae0043673739465393a8a532f4a11ebd964c
 
-PODFILE CHECKSUM: b7de45204294c3873b471c73fcbd8101d8d90c9a
+PODFILE CHECKSUM: a06f2e740cd38c7c64755ddea3d8ca514f56896b
 
 COCOAPODS: 1.4.0
