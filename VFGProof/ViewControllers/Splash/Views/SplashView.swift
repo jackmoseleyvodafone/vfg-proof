@@ -29,6 +29,8 @@ class SplashView: BaseView {
 
     override func setupSubviews() {
         
+        backgroundColor = .red
+        
         addSubview(backgroundImageView)
         addSubview(splashView)
     }

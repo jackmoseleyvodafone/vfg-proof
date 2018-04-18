@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Vodafone-Rg.ttf">
+        <array key="vodafone-regular.ttf">
             <string>VodafoneRg-Regular</string>
         </array>
     </customFonts>
@@ -37,14 +37,14 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="94r-iN-keK">
-                                <rect key="frame" x="50" y="24" width="275" height="92"/>
+                                <rect key="frame" x="50" y="24" width="275" height="91"/>
                                 <string key="text">Alice, you’re offline\rThere\'s no connection on your phone. You can still use the app but some screens won\'t be up to date. Alice, you’re offline\rThere\'s no connection on your phone. You can still use the app but some screens won\'t be up to date.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ajS-r2-9Ig">
-                                <rect key="frame" x="50" y="121" width="133" height="35"/>
+                                <rect key="frame" x="50" y="120" width="133" height="36"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="VodafoneRg-Regular" family="Vodafone Rg" pointSize="16"/>
                                 <state key="normal" title="Yes please">
@@ -72,7 +72,7 @@
                                 <variation key="heightClass=regular-widthClass=regular" image="speechCorner_iPad"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X9U-1E-woG">
-                                <rect key="frame" x="192" y="121" width="133" height="35"/>
+                                <rect key="frame" x="192" y="120" width="133" height="36"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="VodafoneRg-Regular" family="Vodafone Rg" pointSize="16"/>
                                 <state key="normal" title="No thanks">
@@ -93,7 +93,6 @@
                             <constraint firstItem="X9U-1E-woG" firstAttribute="height" secondItem="ajS-r2-9Ig" secondAttribute="height" id="BW5-UC-Nr3"/>
                             <constraint firstAttribute="bottom" secondItem="Pin-jr-hX5" secondAttribute="bottom" id="H7j-eh-CJ1"/>
                             <constraint firstItem="nl4-iC-zTS" firstAttribute="top" secondItem="ajS-r2-9Ig" secondAttribute="bottom" constant="25" id="HGj-Mv-koi"/>
-                            <constraint firstAttribute="width" constant="375" id="Mu3-V2-num"/>
                             <constraint firstItem="94r-iN-keK" firstAttribute="top" secondItem="Pin-jr-hX5" secondAttribute="top" constant="24" id="VKs-pP-k2p"/>
                             <constraint firstItem="X9U-1E-woG" firstAttribute="width" secondItem="ajS-r2-9Ig" secondAttribute="width" id="bgA-Rp-sNL"/>
                             <constraint firstItem="Pin-jr-hX5" firstAttribute="trailing" secondItem="94r-iN-keK" secondAttribute="trailing" constant="25" id="hue-5B-z0X"/>
@@ -123,7 +122,6 @@
             <size key="customSize" width="50" height="45"/>
             <connections>
                 <outlet property="containerView" destination="J7K-4I-q5S" id="RXf-AR-9Pb"/>
-                <outlet property="layoutWidth" destination="Mu3-V2-num" id="kuI-M6-Pzm"/>
                 <outlet property="leftButton" destination="ajS-r2-9Ig" id="LV8-cC-hCM"/>
                 <outlet property="rightButton" destination="X9U-1E-woG" id="B1y-Il-vOq"/>
                 <outlet property="titleLabel" destination="94r-iN-keK" id="xyI-Uj-5CR"/>

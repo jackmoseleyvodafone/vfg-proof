@@ -48,7 +48,7 @@ class SplashViewController: BaseViewController {
         
         VFGAnimatedSplash.sharedInstance.setComplitionHandler { (result) in
             
-            VFGAnimatedSplash.sharedInstance
+            VFGAnimatedSplash.sharedInstance.removeSplashView(completionHandler: nil)
             
             // check data loaded
             

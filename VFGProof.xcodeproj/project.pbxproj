@@ -16,6 +16,9 @@
 		F74658552084CE1F00FE106C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F74658532084CE1F00FE106C /* Localizable.strings */; };
 		F74658562084CE1F00FE106C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F74658532084CE1F00FE106C /* Localizable.strings */; };
 		F74658572084CE1F00FE106C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F74658532084CE1F00FE106C /* Localizable.strings */; };
+		F746585B2084D96700FE106C /* VoVRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F746585A2084D96700FE106C /* VoVRepository.swift */; };
+		F746585C2084D96700FE106C /* VoVRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F746585A2084D96700FE106C /* VoVRepository.swift */; };
+		F746585D2084D96700FE106C /* VoVRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F746585A2084D96700FE106C /* VoVRepository.swift */; };
 		F7A79BD0207391AE000843CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A79BCF207391AE000843CE /* AppDelegate.swift */; };
 		F7A79BD8207391AE000843CE /* VFGProof.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F7A79BD6207391AE000843CE /* VFGProof.xcdatamodeld */; };
 		F7A79BDA207391AE000843CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7A79BD9207391AE000843CE /* Assets.xcassets */; };
@@ -74,6 +77,7 @@
 		F746584F2084CDCD00FE106C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F74658522084CDD500FE106C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		F74658542084CE1F00FE106C /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F746585A2084D96700FE106C /* VoVRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoVRepository.swift; sourceTree = "<group>"; };
 		F7A79BCC207391AE000843CE /* VFGProof.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VFGProof.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7A79BCF207391AE000843CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7A79BD7207391AE000843CE /* VFGProof.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VFGProof.xcdatamodel; sourceTree = "<group>"; };
@@ -145,6 +149,22 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		F74658582084D8EB00FE106C /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				F74658592084D8F600FE106C /* VoV */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		F74658592084D8F600FE106C /* VoV */ = {
+			isa = PBXGroup;
+			children = (
+				F746585A2084D96700FE106C /* VoVRepository.swift */,
+			);
+			path = VoV;
+			sourceTree = "<group>";
+		};
 		F7A79BC3207391AE000843CE = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +190,7 @@
 		F7A79BCE207391AE000843CE /* VFGProof */ = {
 			isa = PBXGroup;
 			children = (
+				F74658582084D8EB00FE106C /* Repositories */,
 				F7C517112080E67400ABFF5F /* Extensions */,
 				F7A79C0120739322000843CE /* Supporting Files */,
 				F7A79C002073926F000843CE /* ViewControllers */,
@@ -609,6 +630,7 @@
 				F7C517092080E56700ABFF5F /* HomeViewController.swift in Sources */,
 				F7C51722208495BE00ABFF5F /* SplashViewController.swift in Sources */,
 				F7C51727208495D700ABFF5F /* SplashView.swift in Sources */,
+				F746585B2084D96700FE106C /* VoVRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -621,6 +643,7 @@
 				F7C5170F2080E58800ABFF5F /* HomeView.swift in Sources */,
 				F7A79BE8207391AE000843CE /* VFGProofTests.swift in Sources */,
 				F7A79C06207399D0000843CE /* BaseViewController.swift in Sources */,
+				F746585C2084D96700FE106C /* VoVRepository.swift in Sources */,
 				F7C517142080E68900ABFF5F /* UIViewExtensions.swift in Sources */,
 				F7C51723208495BE00ABFF5F /* SplashViewController.swift in Sources */,
 				F7C5170A2080E56700ABFF5F /* HomeViewController.swift in Sources */,
@@ -636,6 +659,7 @@
 				F7C517102080E58800ABFF5F /* HomeView.swift in Sources */,
 				F7A79BF3207391AE000843CE /* VFGProofUITests.swift in Sources */,
 				F7A79C07207399D0000843CE /* BaseViewController.swift in Sources */,
+				F746585D2084D96700FE106C /* VoVRepository.swift in Sources */,
 				F7C517152080E68900ABFF5F /* UIViewExtensions.swift in Sources */,
 				F7C51724208495BE00ABFF5F /* SplashViewController.swift in Sources */,
 				F7C5170B2080E56700ABFF5F /* HomeViewController.swift in Sources */,

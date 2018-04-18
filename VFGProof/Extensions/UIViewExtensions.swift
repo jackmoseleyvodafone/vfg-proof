@@ -11,10 +11,15 @@ import UIKit
 extension UIView {
     
     // MARK: Align different edges
-    func alignAttribute(_ selfAttribute: NSLayoutAttribute, WithView relatedView: UIView, Attribute relatedViewAttribute: NSLayoutAttribute, constant: CGFloat) {
+    @discardableResult
+    func alignAttribute(_ selfAttribute: NSLayoutAttribute, WithView relatedView: UIView, Attribute relatedViewAttribute: NSLayoutAttribute, constant: CGFloat) -> NSLayoutConstraint {
         self.translatesAutoresizingMaskIntoConstraints = false
         
-        self.superview!.addConstraint(NSLayoutConstraint(item: self, attribute: selfAttribute, relatedBy: .equal, toItem: relatedView, attribute: relatedViewAttribute, multiplier: 1, constant: constant))
+        let constraint: NSLayoutConstraint = NSLayoutConstraint(item: self, attribute: selfAttribute, relatedBy: .equal, toItem: relatedView, attribute: relatedViewAttribute, multiplier: 1, constant: constant)
+        
+        constraint.isActive = true
+        
+        return constraint
     }
     
     // MARK: Single edge layout
@@ -63,12 +68,18 @@ extension UIView {
     
     // MARK: Width and height layout
     
-    func constrainWidth(_ constant: CGFloat) {
+    @discardableResult
+    func constrainWidth(_ constant: CGFloat) -> NSLayoutConstraint {
         self.translatesAutoresizingMaskIntoConstraints = false
         
-        self.superview!.addConstraint(NSLayoutConstraint(item: self, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: constant))
+        let constraint: NSLayoutConstraint = NSLayoutConstraint(item: self, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: constant)
+        
+        constraint.isActive = true
+        
+        return constraint
     }
     
+    @discardableResult
     func constrainHeight(_ constant: CGFloat) -> NSLayoutConstraint {
         self.translatesAutoresizingMaskIntoConstraints = false
         

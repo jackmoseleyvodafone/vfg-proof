@@ -56,7 +56,9 @@ class HomeView: BaseView {
         backgroundImageView.alignWithView(self)
         
         // scroll view
-        scrollView.alignWithView(self)
+        scrollView.alignTopAndLeadingEdgesWithView(self, topConstant: 0, leadingConstant: 0)
+        scrollView.constrainWidthWithView(self, constant: 0)
+        scrollView.constrainHeightWithView(self, constant: 0)
         
         // container view
         containerView.alignTopAndLeadingEdgesWithView(scrollView, topConstant: 0, leadingConstant: 0)
@@ -74,6 +76,5 @@ class HomeView: BaseView {
         blankView.alignLeadingAndTrailingEdgesWithView(containerView, leadingConstant: 0, trailingConstant: 0)
         blankView.constrainHeight(2000)
         blankView.alignBottomEdgeWithView(containerView, constant: 0)
-        
     }
 }

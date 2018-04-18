@@ -20,11 +20,6 @@ class BaseView: UIView {
     
     convenience init() {
         self.init(frame: CGRect.zero)
-        
-        self.translatesAutoresizingMaskIntoConstraints = false
-        
-        setupSubviews()
-        setupAutolayout()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -33,6 +28,11 @@ class BaseView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
+        self.translatesAutoresizingMaskIntoConstraints = false
+        
+        setupSubviews()
+        setupAutolayout()
     }
     
     // MARK: - View Setup
