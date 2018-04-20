@@ -34,7 +34,7 @@ class VFGBlockingGestureRecognizerHandler: NSObject, UIGestureRecognizerDelegate
         return recognizer
     }
 
-    func rocognizerTouched(recognizer: UIGestureRecognizer) {
+    @objc func rocognizerTouched(recognizer: UIGestureRecognizer) {
         self.view.hideCellOptions(withAnimation: true)
     }
 

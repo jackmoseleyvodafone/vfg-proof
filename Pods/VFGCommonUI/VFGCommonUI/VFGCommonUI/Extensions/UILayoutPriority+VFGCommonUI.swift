@@ -9,6 +9,11 @@
 import UIKit
 
 public extension UILayoutPriority{
+    #if swift(>=4.1)
+    public static let high: UILayoutPriority = UILayoutPriority(rawValue: 999)
+    public static let low: UILayoutPriority = UILayoutPriority(rawValue: 250)
+    #else
     public static let high: UILayoutPriority = 999
     public static let low: UILayoutPriority = 250
+    #endif
 }

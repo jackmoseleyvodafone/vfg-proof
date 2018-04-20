@@ -180,7 +180,7 @@ public class VFGFloatingBubbleView: UIView , UIViewControllerTransitioningDelega
         }
     }
     
-    public func playExplotionAnimation(){
+    @objc public func playExplotionAnimation(){
         
         let animationResourceName : String = "bubblepop_isolated"
         let animationResourceExtension : String = "json"
@@ -269,7 +269,7 @@ public class VFGFloatingBubbleView: UIView , UIViewControllerTransitioningDelega
         addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapGestureAction)))
     }
     
-    func tapGestureAction() {
+    @objc func tapGestureAction() {
         superView?.endEditing(true)
         VFGAnalyticsHandler.trackEventForFloatingBubbleClick()
         clickAction?()
@@ -284,7 +284,7 @@ public class VFGFloatingBubbleView: UIView , UIViewControllerTransitioningDelega
     /**
      Start Splash Animations
      */
-    public func playExpandAnimation(){
+    @objc public func playExpandAnimation(){
         
         guard let controller : UIViewController = presentedViewController else {
             VFGLogger.log("Cannot unwrap presentedViewController")
@@ -444,9 +444,11 @@ public class VFGFloatingBubbleView: UIView , UIViewControllerTransitioningDelega
             VFGLogger.log("Cannot unwrap viewTopFont")
             return nil
         }
-        
+        #if swift(>=4.1)
+        let AttrString : NSAttributedString = NSAttributedString.init(string: viewTitle, attributes: [kCTFontAttributeName as NSAttributedStringKey: viewTopFont, kCTForegroundColorAttributeName as NSAttributedStringKey: color])
+        #else
         let AttrString : NSAttributedString = NSAttributedString.init(string: viewTitle, attributes: [NSFontAttributeName: viewTopFont, NSForegroundColorAttributeName: color])
-        
+        #endif
         let paragraphStyle : NSMutableParagraphStyle = NSMutableParagraphStyle()
         paragraphStyle.minimumLineHeight = 1
         paragraphStyle.lineSpacing = lineSpacing
@@ -455,7 +457,11 @@ public class VFGFloatingBubbleView: UIView , UIViewControllerTransitioningDelega
         let attrString: NSMutableAttributedString = NSMutableAttributedString()
         
         attrString.append(AttrString)
+        #if swift(>=4.1)
+        attrString.addAttribute(kCTParagraphStyleAttributeName as NSAttributedStringKey, value: paragraphStyle, range: NSMakeRange(0, attrString.length))
+        #else
         attrString.addAttribute(NSParagraphStyleAttributeName, value: paragraphStyle, range: NSMakeRange(0, attrString.length))
+        #endif
         return attrString
         
     }

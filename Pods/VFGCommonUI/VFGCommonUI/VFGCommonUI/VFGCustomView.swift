@@ -27,13 +27,22 @@ class VFGCustomView: UIView, SizeableView {
         if let h = header{
             self.header.text = h
             imgToView.constant = 0
+            #if swift(>=4.1)
+            imgToView.priority = UILayoutPriority.defaultLow
+            #else
             imgToView.priority = UILayoutPriorityDefaultLow
+            #endif
         }else{
             self.header.isHidden = true
             imgTop.constant = 0
             imgToView.constant = 0
+            #if swift(>=4.1)
+            imgTop.priority = UILayoutPriority.defaultLow
+            imgToView.priority = UILayoutPriority.required
+            #else
             imgTop.priority = UILayoutPriorityDefaultLow
             imgToView.priority = UILayoutPriorityRequired
+            #endif
         }
         // Setting up image
         if let i = img {

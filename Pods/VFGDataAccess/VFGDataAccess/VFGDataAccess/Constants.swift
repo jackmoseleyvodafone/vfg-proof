@@ -29,7 +29,6 @@ public enum HTTPMethod: String {
     case connect = "CONNECT"
 }
 
-
 public enum DafServiceNames: String {
     case customerParty = "customerParty"
     case billingData     = "billingData"
@@ -39,19 +38,16 @@ public enum DafServiceNames: String {
     case ConcertinaSingleOrMultiple = "ConcertinaSingleOrMultiple"
     case childBillsHistory = "childBillsHistory"
     case singleOrMultipleBillsHistory = "singleOrMultipleBillsHistory"
-
-    
     case childCurrentBalance = "childCurrentBalance"
     case singleCurrentBalance = "singleCurrentBalance"
     case multipleCurrentBalance = "multipleCurrentBalance"
-
     case onlineTvChangeUserName = "onlineTvChangeUserName"
     case renewBenefit = "renewBenefit"
     case getProduct = "getProduct"
-
+    case getServices = "getServices"
 }
+
 public enum CacheMode {
     case RAM
     case DISK
 }
-

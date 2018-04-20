@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "68D0B21ED07A643D9131BCF67B515ECC"
+               BlueprintIdentifier = "439A3EE5D5FDA88A617AA706F02D9D7D"
                BuildableName = "VFGDataAccess.bundle"
                BlueprintName = "VFGDataAccess-VFGDataAccess"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "68D0B21ED07A643D9131BCF67B515ECC"
+            BlueprintIdentifier = "439A3EE5D5FDA88A617AA706F02D9D7D"
             BuildableName = "VFGDataAccess.bundle"
             BlueprintName = "VFGDataAccess-VFGDataAccess"
             ReferencedContainer = "container:Pods.xcodeproj">

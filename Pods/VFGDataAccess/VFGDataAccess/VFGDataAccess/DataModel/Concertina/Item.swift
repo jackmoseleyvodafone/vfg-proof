@@ -11,6 +11,7 @@ import ObjectMapper
 
 public class Item : BaseModel{
     public var billDetails : [BillDetail]?
+    public var billDocuments : [BillingDocument]?
 	public var billOverview : BillOverview?
 	public var billingAccount : BillingAccount?
 	public var billingCycle : BillingCycle?
@@ -26,6 +27,7 @@ public class Item : BaseModel{
 	{
         /*current balance - single*/
         billDetails <- map["billDetails"]
+        billDocuments <- map["documents"]
 		billOverview <- map["billOverview"]
 		billingAccount <- map["billingAccount"]
 		billingCycle <- map["billingCycle"]

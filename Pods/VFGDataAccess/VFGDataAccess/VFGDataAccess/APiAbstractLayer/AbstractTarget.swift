@@ -34,15 +34,15 @@ enum BillingApi: AbstractTarget{
     
     /*Bills History*/
     case childBillsHistory(billingAccountId:String,MSISDN:String,billRequestType:BillRequestType)
-    case singleOrMultipleBillsHistory(billingAccountId:String,billRequestType:BillRequestType)
+    case singleOrMultipleBillsHistory(billingAccountId:String,billRequestType:BillRequestType,offset:Int)
     
     case offlineLocalFile(url:URL)
     
     /*Current Balance*/
     case singleCurrentBalance(billingAccountId:String,
-        billRequestType:BillRequestType)
+        billRequestType:BillRequestType,offset:Int)
     case multipleCurrentBalance(billingAccountId:String,
-        billRequestType:BillRequestType)
+        billRequestType:BillRequestType,offset:Int)
     case childCurrentBalance(billingAccountId:String,
         MSISDN:String,
         billRequestType:BillRequestType)
@@ -123,10 +123,11 @@ enum BillingApi: AbstractTarget{
             dic["MSISDN"] = MSISDN
             dic["billRequestType"] = billRequestType.rawValue
             return dic
-        case .singleOrMultipleBillsHistory(let billingAccountId, let billRequestType):
+        case .singleOrMultipleBillsHistory(let billingAccountId, let billRequestType, let page):
             var dic = [String:Any]()
             dic["billingAccountId"] = billingAccountId
             dic["billRequestType"] = billRequestType.rawValue
+            dic["offset"] = page
             return dic
         
             /*Current Balance*/
@@ -139,16 +140,24 @@ enum BillingApi: AbstractTarget{
             dic["billRequestType"] = billRequestType.rawValue
             return dic
         case .singleCurrentBalance(let billingAccountId,
-                                   let billRequestType):
+                                   let billRequestType,
+                                   let page):
             var dic = [String:Any]()
             dic["billingAccountId"] = billingAccountId
             dic["billRequestType"] = billRequestType.rawValue
+            if billRequestType == .current {
+                dic["offset"] = page
+            }
             return dic
         case .multipleCurrentBalance(let billingAccountId,
-                                     let billRequestType):
+                                     let billRequestType,
+                                     let page):
             var dic = [String:Any]()
             dic["billingAccountId"] = billingAccountId
             dic["billRequestType"] = billRequestType.rawValue
+            if billRequestType == .current {
+                dic["offset"] = page
+            }
             return dic
         }
         

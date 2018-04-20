@@ -13,9 +13,9 @@ import VFGCommonUtils
 /**
  Internal catergory which returns localized strings for CommonUI classes
  */
-public extension String {
+internal extension String {
     
-    public var localized: String {
+    internal var localized: String {
         
         var result : String = String()
         

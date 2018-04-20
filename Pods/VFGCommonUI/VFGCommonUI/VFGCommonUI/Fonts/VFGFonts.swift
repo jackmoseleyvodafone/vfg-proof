@@ -47,9 +47,13 @@ public extension UIFont {
         guard let dataProvider = CGDataProvider(data: fontData) else {
             return
         }
-        
+        #if swift(>=4.1)
+        guard let fontRef = CGFont.init(dataProvider) else {
+            return
+        }
+        #else
         let fontRef = CGFont.init(dataProvider)
-        
+        #endif
         var error: UnsafeMutablePointer<Unmanaged<CFError>?>?
         if(CTFontManagerRegisterGraphicsFont(fontRef,error) == false) {
             return

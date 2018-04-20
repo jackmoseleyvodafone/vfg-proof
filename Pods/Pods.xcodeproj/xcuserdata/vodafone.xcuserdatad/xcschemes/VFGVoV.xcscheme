@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C54C1FFF6D7FC5DED3FA3EE2B90F6590"
+               BlueprintIdentifier = "22EBE171638BF42E163E334A4774C53F"
                BlueprintName = "VFGVoV"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "VFGVoV.framework">

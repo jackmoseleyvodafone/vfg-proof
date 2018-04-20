@@ -13,10 +13,12 @@ public class BillDetail : BaseModel{
     public var amounts : [Amount]?
     public var ext : BillOverViewExtension?
     public var type : String?
+    public var subscriptionID : String?
     
     override public func mapping(map: Map) {
         amounts <- map["amounts"]
         ext <- map["extension"]
         type <- map["type"]
+        subscriptionID <- map["subscriptionId"]
     }
 }

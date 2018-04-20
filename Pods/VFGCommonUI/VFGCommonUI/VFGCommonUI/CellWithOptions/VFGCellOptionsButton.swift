@@ -45,7 +45,11 @@ public class VFGCellOptionsButton: UIButton {
 
     private func setupCell(_ option : VFGCellOption) {
         self.translatesAutoresizingMaskIntoConstraints = false
+        #if swift(>=4.1)
+        self.setContentHuggingPriority(UILayoutPriority.required, for: .horizontal)
+        #else
         self.setContentHuggingPriority(UILayoutPriorityRequired, for: .horizontal)
+        #endif
         self.backgroundColor = option.backgroundColor
         self.setupLabel(option.text, textColor: option.textColor)
         self.setupImage(option.image)

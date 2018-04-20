@@ -130,7 +130,7 @@ public class VFDAF: NSObject {
      - Parameter failure: failure block with error.
      
      */
-    public func renewBenefit(_ benefitStatus: String? = nil, tariffId: String? = nil, success:@escaping DAFManagerSuccessClosure, failure:  @escaping DAFManagerErrorClosure) {
+    public func renewBenefit(_ benefitStatus: String?, tariffId: String?, success:@escaping DAFManagerSuccessClosure, failure:  @escaping DAFManagerErrorClosure) {
         
         dafService?.renewBenefit(benefitStatus, tariffId: tariffId, success: success, failure: failure)
         
@@ -146,9 +146,23 @@ public class VFDAF: NSObject {
      - Parameter failure: failure block with error.
      
      */
-    public func getProduct(_ serivceId: String, siteId: String, productType: String, success:@escaping DAFManagerSuccessClosure, failure:  @escaping DAFManagerErrorClosure) {
+    public func getProduct(_ queryParameters: [String: String], success:@escaping DAFManagerSuccessClosure, failure:  @escaping DAFManagerErrorClosure) {
         
-        dafService?.getProduct(serivceId, siteId: siteId, productType: productType, success: success, failure: failure)
+        dafService?.getProduct(queryParameters, success: success, failure: failure)
+        
+    }
+    
+    /**
+     
+     Retrieves services
+     - Parameter queryParameters: queryParameters.
+     - Parameter success: success block with model.
+     - Parameter failure: failure block with error.
+     
+     */
+    public func getServices(_ queryParameters: [String: String], success:@escaping DAFManagerSuccessClosure, failure:  @escaping DAFManagerErrorClosure) {
+        
+        dafService?.getServices(queryParameters, success: success, failure: failure)
         
     }
 
@@ -260,9 +274,9 @@ public class VFDAF: NSObject {
         self.dafAbstractService?.getChildConcertina(billingAccountId:billingAccountId,MSISDN: MSISDN,billRequestType:BillRequestType.current,success:success, failure: failure)
     }
     
-    public func getSingleOrMultipleBillsHistory(billingAccountId:String,success:@escaping  (_ model:BillingModel)->(), failure:  @escaping DAFManagerAbstractErrorClosure){
+    public func getSingleOrMultipleBillsHistory(billingAccountId:String,page:Int,success:@escaping  (_ model:BillingModel)->(), failure:  @escaping DAFManagerAbstractErrorClosure){
         
-        self.dafAbstractService?.getSingleOrMultipleBillsHistory(billingAccountId:billingAccountId,billRequestType:BillRequestType.history,success:success, failure: failure)
+        self.dafAbstractService?.getSingleOrMultipleBillsHistory(billingAccountId:billingAccountId,billRequestType:BillRequestType.history, page: page,success:success, failure: failure)
     }
     
     public func getChildBillsHistory(billingAccountId:String,MSISDN: String,success:@escaping  (_ model:BillingModel)->(), failure:  @escaping DAFManagerAbstractErrorClosure){
@@ -282,27 +296,31 @@ extension VFDAF {
 // MARK: Section Single Current Balance
 extension VFDAF {
     public func getSingleCurrentBalance(billingAccountID:String,
+                                        page:Int,
                                         success:@escaping  (_ model:BillingModel)->(),
                                         failure:  @escaping DAFManagerAbstractErrorClosure){
-    self.dafAbstractService?.getSingleCurrentBalance(billingAccountId: billingAccountID, billRequestType: BillRequestType.current, success: success, failure: failure)
+        self.dafAbstractService?.getSingleCurrentBalance(billingAccountId: billingAccountID, billRequestType: BillRequestType.current, page: page, success: success, failure: failure)
     }
     public func getSingleCurrentBalanceOverview(billingAccountID:String,
+                                            page:Int,
                                         success:@escaping  (_ model:BillingModel)->(),
                                         failure:  @escaping DAFManagerAbstractErrorClosure){
-        self.dafAbstractService?.getSingleCurrentBalance(billingAccountId: billingAccountID, billRequestType: BillRequestType.balance, success: success, failure: failure)
+        self.dafAbstractService?.getSingleCurrentBalance(billingAccountId: billingAccountID, billRequestType: BillRequestType.balance, page: page, success: success, failure: failure)
     }
 }
 
 // MARK: Section Multiple Current Balance
 extension VFDAF {
     public func getMultipleCurrentBalance(billingAccountID:String,
+                                          page:Int,
                                         success:@escaping  (_ model:BillingModel)->(),
                                         failure:  @escaping DAFManagerAbstractErrorClosure){
-        self.dafAbstractService?.getMultipleCurrentBalance(billingAccountId: billingAccountID, billRequestType: BillRequestType.current, success: success, failure: failure)
+        self.dafAbstractService?.getMultipleCurrentBalance(billingAccountId: billingAccountID, billRequestType: BillRequestType.current, page: page, success: success, failure: failure)
     }
     public func getMultipleCurrentBalanceOverview(billingAccountID:String,
+                                                  page:Int,
                                                 success:@escaping  (_ model:BillingModel)->(),
                                                 failure:  @escaping DAFManagerAbstractErrorClosure){
-        self.dafAbstractService?.getMultipleCurrentBalance(billingAccountId: billingAccountID, billRequestType: BillRequestType.balance, success: success, failure: failure)
+        self.dafAbstractService?.getMultipleCurrentBalance(billingAccountId: billingAccountID, billRequestType: BillRequestType.balance, page: page, success: success, failure: failure)
     }
 }

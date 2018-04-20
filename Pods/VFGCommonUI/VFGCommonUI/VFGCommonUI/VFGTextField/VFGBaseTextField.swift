@@ -30,7 +30,7 @@ public class VFGBaseTextField: UITextField {
     // MARK: - Class Properties
     
     let rightViewBtn = UIImageView(image: UIImage(named: "info"))
-    var callBack: (()->Void) = {_ in print("Right view button clicked")}
+    var callBack: (()->Void) = {print("Right view button clicked")}
     var showImage: Bool = false {
         didSet {
             

@@ -26,6 +26,9 @@ fileprivate struct MappingKey {
     static let renewBenefitURL : String = "renewBenefitURL"
     static let getProductPath : String = "getProductPath"
     static let getProductURL : String = "getProductURL"
+    static let getServicesPath : String = "getServicesPath"
+    static let getServicesURL : String = "getServicesURL"
+    
 }
 
 public enum VFDAFBaseUrl: String{
@@ -80,6 +83,10 @@ public class VFDAFConfiguration : BaseModel {
      Change renew benefit path part of URL
      */
     public var getProductPath: String = "/v2/product/products"
+    /**
+     Change renew benefit path part of URL
+     */
+    public var getServicesPath: String = "/v2/subscription/subscriptions/"
     
     /**
      Optional customer party URL which will be used instead of baseURL
@@ -105,6 +112,10 @@ public class VFDAFConfiguration : BaseModel {
      Optional get product URL which will be used instead of baseURL
      */
     public var getProductURL: String? = "http://stubs-test.tsse.co/api"
+    /**
+     Optional get product URL which will be used instead of baseURL
+     */
+    public var getServicesURL: String? = "http://stubs-test.tsse.co/api"
     
     /**
      Campaign URL
@@ -141,6 +152,8 @@ public class VFDAFConfiguration : BaseModel {
         renewBenefitURL <- map[MappingKey.renewBenefitURL]
         getProductPath <- map[MappingKey.getProductPath]
         getProductURL <- map[MappingKey.getProductURL]
+        getServicesPath <- map[MappingKey.getServicesPath]
+        getServicesURL <- map[MappingKey.getServicesURL]
     }
    
     public func setBaseUrl(baseURL: VFDAFBaseUrl){

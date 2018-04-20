@@ -37,7 +37,11 @@ public class PlanTextViewCell: UITableViewCell {
             cutomCellLinkButton.setTitle(cellLinkTitle, for: .normal)
             
            //underline
+            #if swift(>=4.1)
+            let underlineAttribute = [kCTUnderlineStyleAttributeName as NSAttributedStringKey: NSUnderlineStyle.styleSingle.rawValue]
+            #else
             let underlineAttribute = [NSUnderlineStyleAttributeName: NSUnderlineStyle.styleSingle.rawValue]
+            #endif
             let underlineAttributedString = NSAttributedString(string:  (cutomCellLinkButton.titleLabel?.text ?? "")!, attributes: underlineAttribute)
             cutomCellLinkButton.titleLabel?.attributedText = underlineAttributedString
 

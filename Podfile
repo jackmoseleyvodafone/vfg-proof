@@ -22,7 +22,7 @@ target 'VFGProof' do
     inherit! :search_paths
     # Pods for testing
   end
-  2
+  
   post_install do |installer|
       
       installer.pods_project.targets.each do |target|
@@ -37,4 +37,14 @@ target 'VFGProof' do
       puts 'Patching UASQLite.patch (Post install temporary fix):'
       %x(patch -b Pods/UrbanAirship-iOS-SDK/AirshipKit/AirshipKit/UASQLite.m < UASQLite.m.patch)
   end
+end
+
+target 'VFGProofCopy' do
+    
+    use_frameworks!
+
+    # Pods for VFGProof
+    
+    pod 'VFGSplash', '0.0.1'
+    pod 'VFGVoV', '0.0.1'
 end

@@ -22,7 +22,14 @@ public final class CacheManager: NSObject {
             }
         }
     }
-    private var cachedApisKeys = [DafServiceNames.customerParty, DafServiceNames.billingHistory, DafServiceNames.billingData]
+    private var cachedApisKeys = [DafServiceNames.customerParty,
+                                  DafServiceNames.billingHistory,
+                                  DafServiceNames.billingData,
+                                  DafServiceNames.onlineTvChangeUserName,
+                                  DafServiceNames.renewBenefit,
+                                  DafServiceNames.getProduct,
+                                  DafServiceNames.getServices
+                                  ]
     internal static var expirationTimeDec = [DafServiceNames:TimeInterval]()
     
     private override init() {

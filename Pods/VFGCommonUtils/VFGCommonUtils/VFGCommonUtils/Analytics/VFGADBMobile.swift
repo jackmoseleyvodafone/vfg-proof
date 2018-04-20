@@ -34,9 +34,11 @@ internal struct VFGADBMobile {
     internal static func overrideConfigPath(path : String) {
         if let ADBMobileClass : AnyClass = NSClassFromString(VFGADBMobile.ADBMobileClassName) {
             let selector : Selector = NSSelectorFromString(ADBMobileClassSelector.overrideConfigPath.rawValue)
-            let implementation : IMP! = method_getImplementation(class_getClassMethod(ADBMobileClass, selector))
-            typealias newInstanceFunctionType = @convention(c)(AnyClass?,Selector,String)-> Void
-            _ =  unsafeBitCast(implementation,to:newInstanceFunctionType.self)(ADBMobileClass,selector,path)
+            if let method : Method = class_getClassMethod(ADBMobileClass, selector) {
+                let implementation : IMP! = method_getImplementation(method)
+                typealias newInstanceFunctionType = @convention(c)(AnyClass?,Selector,String)-> Void
+                _ =  unsafeBitCast(implementation,to:newInstanceFunctionType.self)(ADBMobileClass,selector,path)
+            }
         }
     }
     
@@ -47,9 +49,11 @@ internal struct VFGADBMobile {
     internal static func setDebugLogging(shouldDebug : Bool? = true) {
         if let ADBMobileClass : AnyClass = NSClassFromString(VFGADBMobile.ADBMobileClassName) {
             let selector : Selector = NSSelectorFromString(ADBMobileClassSelector.setDebugLogging.rawValue)
-            let implementation : IMP! = method_getImplementation(class_getClassMethod(ADBMobileClass, selector))
-            typealias newInstanceFunctionType = @convention(c)(AnyClass?,Selector, Bool)-> Void
-            _ =  unsafeBitCast(implementation,to:newInstanceFunctionType.self)(ADBMobileClass,selector, shouldDebug!)
+            if let method : Method = class_getClassMethod(ADBMobileClass, selector) {
+                let implementation : IMP! = method_getImplementation(method)
+                typealias newInstanceFunctionType = @convention(c)(AnyClass?,Selector, Bool)-> Void
+                _ =  unsafeBitCast(implementation,to:newInstanceFunctionType.self)(ADBMobileClass,selector, shouldDebug!)
+            }
         }
     }
     
@@ -60,9 +64,11 @@ internal struct VFGADBMobile {
     internal static func collectLifecycleData() {
         if let ADBMobileClass : AnyClass = NSClassFromString(VFGADBMobile.ADBMobileClassName) {
             let selector : Selector = NSSelectorFromString(ADBMobileClassSelector.collectLifecycleData.rawValue)
-            let implementation : IMP! = method_getImplementation(class_getClassMethod(ADBMobileClass, selector))
-            typealias newInstanceFunctionType = @convention(c)(AnyClass?,Selector)-> Void
-            _ =  unsafeBitCast(implementation,to:newInstanceFunctionType.self)(ADBMobileClass,selector)
+            if let method : Method = class_getClassMethod(ADBMobileClass, selector) {
+                let implementation : IMP! = method_getImplementation(method)
+                typealias newInstanceFunctionType = @convention(c)(AnyClass?,Selector)-> Void
+                _ =  unsafeBitCast(implementation,to:newInstanceFunctionType.self)(ADBMobileClass,selector)
+            }
         }
     }
     
@@ -74,12 +80,14 @@ internal struct VFGADBMobile {
     internal static func visitorMarketingCloudID() -> String? {
         if let ADBMobileClass : AnyClass = NSClassFromString(VFGADBMobile.ADBMobileClassName) {
             let selector : Selector = NSSelectorFromString(ADBMobileClassSelector.visitorMarketingCloudID.rawValue)
-            let implementation : IMP! = method_getImplementation(class_getClassMethod(ADBMobileClass, selector))
-            typealias newInstanceFunctionType = @convention(c)(AnyClass?,Selector)-> NSString?
-            if let cloudID = unsafeBitCast(implementation,to:newInstanceFunctionType.self)(ADBMobileClass,selector) as String? {
-                return cloudID
+            if let method : Method = class_getClassMethod(ADBMobileClass, selector) {
+                let implementation : IMP! = method_getImplementation(method)
+                typealias newInstanceFunctionType = @convention(c)(AnyClass?,Selector)-> NSString?
+                if let cloudID = unsafeBitCast(implementation,to:newInstanceFunctionType.self)(ADBMobileClass,selector) as String? {
+                    return cloudID
+                }
+                return nil
             }
-            return nil
         }
         return nil
     }

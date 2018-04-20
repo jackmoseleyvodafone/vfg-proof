@@ -34,7 +34,7 @@ class VFGLeftPanGestureHandler: NSObject, UIGestureRecognizerDelegate {
         return recognizer;
     }
 
-    func handleGesture(gestureRecognizer: UIPanGestureRecognizer) {
+    @objc func handleGesture(gestureRecognizer: UIPanGestureRecognizer) {
         
         VFGLogger.log("VFGLeftPanGestureHandler state is " + String(gestureRecognizer.state.rawValue))
         

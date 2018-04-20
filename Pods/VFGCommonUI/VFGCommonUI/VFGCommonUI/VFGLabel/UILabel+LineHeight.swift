@@ -21,7 +21,11 @@ extension UILabel {
             let style = NSMutableParagraphStyle()
             
             style.lineSpacing = lineHeight
+            #if swift(>=4.1)
+            attributeString.addAttribute(kCTParagraphStyleAttributeName as NSAttributedStringKey, value: style, range: NSMakeRange(0, attributeString.length))
+            #else
             attributeString.addAttribute(NSParagraphStyleAttributeName, value: style, range: NSMakeRange(0, attributeString.length))
+            #endif
             self.attributedText = attributeString
         }
     }

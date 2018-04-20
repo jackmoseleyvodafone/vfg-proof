@@ -8,6 +8,7 @@
 
 import ObjectMapper
 import VFGCommonUtils
+import Gloss
 
 fileprivate struct MappingKey {
 
@@ -52,7 +53,7 @@ fileprivate struct MappingKey {
     case eventDriven = 3
 }
 
-public class VovMessage: BaseModel, NSCoding {
+public class VovMessage: BaseModel {
 
     public var messageTitle : String?
     public var messageBody : String?
@@ -72,8 +73,9 @@ public class VovMessage: BaseModel, NSCoding {
     public var autoExpire : String?
     public var autoExpireAsInt : Int?
     public var dateReceived: Date?
+    
 
-    public func encode(with aCoder: NSCoder) {
+    public override func encode(with aCoder: NSCoder) {
         aCoder.encode(messageTitle, forKey: MappingKey.messageTitle)
         aCoder.encode(messageBody, forKey: MappingKey.messageBody)
         aCoder.encode(deliveryMethod, forKey: MappingKey.deliveryMethod)
@@ -91,6 +93,8 @@ public class VovMessage: BaseModel, NSCoding {
         aCoder.encode(autoExpire, forKey: MappingKey.autoExpire)
         aCoder.encode(autoExpireAsInt, forKey: MappingKey.autoExpireAsInt)
         aCoder.encode(dateReceived, forKey: MappingKey.dateReceived)
+        aCoder.encode(locale, forKey: MappingKey.locale)
+        
     }
 
     public required init?(coder aDecoder: NSCoder) {
@@ -143,6 +147,10 @@ public class VovMessage: BaseModel, NSCoding {
         if aDecoder.containsValue(forKey: MappingKey.dateReceived) {
             dateReceived = aDecoder.decodeObject(forKey: MappingKey.dateReceived) as? Date
         }
+        if aDecoder.containsValue(forKey: MappingKey.locale) {
+            locale = aDecoder.decodeObject(forKey: MappingKey.locale) as? String
+        }
+
     }
 
     private func getDecodedObject(_ key: String,coder aDecoder: NSCoder) -> Any? {
@@ -169,6 +177,10 @@ public class VovMessage: BaseModel, NSCoding {
         super.init(map: map)
     }
 
+    public required init?(json: JSON) {
+        super.init()
+    }
+    
     public var type : VovMessageType {
         get{
             if self.ctaButtonText == nil || self.ctaButtonText?.count == 0 ||

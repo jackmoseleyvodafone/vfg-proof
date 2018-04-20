@@ -10,23 +10,22 @@ import Foundation
 import SwiftMessages
 
 open class VFGSnackbar : NSObject {
+    /**
+       View which will be passed to SwiftMessages.show(). This property can be used to customize message displayed by SwiftMessages pod.
+    */
+    public var messageView = MessageView.viewFromNib(layout: .messageView)
     
     open func show(message: String, duration: TimeInterval , image: UIImage?) {
         
-        let view = MessageView.viewFromNib(layout: .messageView)
-        
         let icon = UIImage(fromCommonUINamed: "tick")
         
-        view.configureTheme(backgroundColor: .black, foregroundColor: .white, iconImage: icon, iconText: nil)
-        if view.responds(to:#selector(MessageView.configureTheme(backgroundColor:foregroundColor:iconImage:iconText:))) {
-            view.configureTheme(backgroundColor: .black, foregroundColor: .white, iconImage: icon, iconText: nil)
-        }
+        messageView.configureTheme(backgroundColor: .black, foregroundColor: .white, iconImage: icon, iconText: nil)
         
-        view.configureContent(title: "", body: message)
+        messageView.configureContent(title: "", body: message)
         
-        view.button?.removeFromSuperview()
+        messageView.button?.removeFromSuperview()
         
-        view.bodyLabel?.font = UIFont.VFGXL() ?? UIFont.systemFont(ofSize: 20)
+        messageView.bodyLabel?.font = UIFont.VFGXL() ?? UIFont.systemFont(ofSize: 20)
         
         var config = SwiftMessages.Config()
         
@@ -45,6 +44,6 @@ open class VFGSnackbar : NSObject {
             if case .didHide = event { print("yep") }
         }
         
-        SwiftMessages.show(config: config, view: view)
+        SwiftMessages.show(config: config, view: messageView)
     }
 }

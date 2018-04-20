@@ -19,7 +19,7 @@ public enum BubbleColor {
     case white
 }
 
-open class VFGRootViewController: UIViewController {
+public class VFGRootViewController: UIViewController {
     
     // MARK: - Public Instance Variables
     
@@ -50,6 +50,7 @@ open class VFGRootViewController: UIViewController {
     @IBOutlet weak var blackOverlayView: UIView!
     @IBOutlet weak var nudgeView: VFGNudgeView!
     @IBOutlet weak var nudgeViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var statusBarHeightConstraint: NSLayoutConstraint!
     
     private var shouldNudgeView:Bool = false
     /**
@@ -243,7 +244,7 @@ open class VFGRootViewController: UIViewController {
         }
     }
     
-    override open func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         self.nudgeView.isHidden = true
         self.blackOverlayView.backgroundColor = UIColor.black.withAlphaComponent(0.5)
@@ -253,7 +254,7 @@ open class VFGRootViewController: UIViewController {
         self.setupTopBarManager()
     }
     
-    open override func viewDidLayoutSubviews() {
+    public override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         if !self.topBarTransitionInProgress {
             self.currentTopBarScrollDelegate.refresh()
@@ -264,33 +265,22 @@ open class VFGRootViewController: UIViewController {
         
         if UIScreen.IS_5_8_INCHES(), #available(iOS 11, *) {
             UIApplication.shared.statusBarStyle = .lightContent
-            
-            let safeAreaGuide = view.safeAreaLayoutGuide
-            
-            for currentConstraint:NSLayoutConstraint in self.statusBarBackgroundView.constraints {
-                if currentConstraint.firstAttribute == .height && currentConstraint.constant != safeAreaGuide.layoutFrame.origin.y {
-                    currentConstraint.constant = safeAreaGuide.layoutFrame.origin.y
-                    
-                    break
-                }
-            }
+            statusBarHeightConstraint.constant = 0
         }
     }
     
-    open override func viewWillAppear(_ animated: Bool) {
+    public override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
     }
     
-    open override func viewDidAppear(_ animated: Bool) {
+    public override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        if self.containerNavigationController.viewControllers.count > 1{
-            self.currentTopBarScrollDelegate.didScroll(withOffset: 0.1)
-        }
+    
         self.currentTopBarScrollDelegate.refresh()
         
     }
-    override open func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    override public func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == VFGRootViewController.embedSegue {
             
             guard let destinationViewController : VFGNavigationController = segue.destination as? VFGNavigationController else {

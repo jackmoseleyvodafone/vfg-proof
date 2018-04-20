@@ -15,7 +15,7 @@ import EDSunriseSet
 @objc public class VFGDayNightHelper: NSObject {
     
     
-    private static let GPSDisabledValue : Double = -1
+    public static let GPSDisabledValue : Double = -1
     
     /**
      Sunrise hour (in 24h format) which will be used in non-GPS mode

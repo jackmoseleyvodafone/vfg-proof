@@ -33,7 +33,7 @@ open class VFGTealiumHelper : NSObject {
     private var trackEventCache : [(title : String, dataSources : [String:Any])] = [(String, [String:Any])]()
     private var trackViewCache : [(title : String, dataSources : [String:Any])] = [(String, [String:Any])]()
     
-    let adbLockQueue = DispatchQueue(label: "VFGTealiumHelper")
+    let adbLockQueue = DispatchQueue(label: "VFGTealiumHelper", attributes: .concurrent)
     internal var waitingForADBMobile : Bool = true
     
     private var adobeTargetRequestQueue : OperationQueue = {
@@ -85,20 +85,20 @@ open class VFGTealiumHelper : NSObject {
     public class func startTracking(account : String, profile : String, environment : String, instanceID : String) {
         
         VFGTealiumHelper.sharedInstance.tealiumInstanceID = instanceID
-        
-        if let TEALConfigurationClass : AnyClass = NSClassFromString("TEALConfiguration") {
-            let selector : Selector = NSSelectorFromString("configurationWithAccount:profile:environment:")
-            let methodIMP : IMP! = method_getImplementation(class_getClassMethod(TEALConfigurationClass, selector))
-            
+        let selector : Selector = NSSelectorFromString("configurationWithAccount:profile:environment:")
+    
+        if let TEALConfigurationClass : AnyClass = NSClassFromString("TEALConfiguration"),
+            let method : Method = class_getClassMethod(TEALConfigurationClass, selector) {
+            let methodIMP : IMP! = method_getImplementation(method)
             typealias configurationWithAccountFunctionType = @convention(c)(AnyClass?,Selector,String,String,String)->NSObject?
             
             if let config : NSObject = unsafeBitCast(methodIMP,to:configurationWithAccountFunctionType.self)(TEALConfigurationClass,selector,account,profile,environment) {
                 
                 config.setValue(3, forKey: "logLevel")
-                
-                if let TealiumClass : AnyClass = NSClassFromString("Tealium") {
-                    let selector2 : Selector = NSSelectorFromString("newInstanceForKey:configuration:")
-                    let methodIMP2 : IMP! = method_getImplementation(class_getClassMethod(TealiumClass, selector2))
+                let selector2 : Selector = NSSelectorFromString("newInstanceForKey:configuration:")
+                if let TealiumClass : AnyClass = NSClassFromString("Tealium"),
+                    let method : Method = class_getClassMethod(TealiumClass, selector2) {
+                    let methodIMP2 : IMP! = method_getImplementation(method)
                     
                     typealias newInstanceFunctionType = @convention(c)(AnyClass?,Selector,String,NSObject?)->NSObject?
                     if let tealiumInstance : NSObject = unsafeBitCast(methodIMP2,to:newInstanceFunctionType.self)(TealiumClass,selector,instanceID,config) {
@@ -135,10 +135,11 @@ open class VFGTealiumHelper : NSObject {
     }
     
     func tealiumInstanceFor(_ ID: String) -> NSObject? {
-        if let TealiumClass : AnyClass = NSClassFromString("Tealium") {
-            let selector : Selector = NSSelectorFromString("instanceForKey:")
-            let methodIMP : IMP! = method_getImplementation(class_getClassMethod(TealiumClass, selector))
+        let selector : Selector = NSSelectorFromString("instanceForKey:")
+        if let TealiumClass : AnyClass = NSClassFromString("Tealium"),
+            let method : Method = class_getClassMethod(TealiumClass, selector) {
             
+            let methodIMP : IMP! = method_getImplementation(method)
             typealias instanceForKeyFunctionType = @convention(c)(AnyClass?,Selector,String)->NSObject
             
             return unsafeBitCast(methodIMP,to:instanceForKeyFunctionType.self)(TealiumClass,selector,ID)
@@ -255,7 +256,6 @@ open class VFGTealiumHelper : NSObject {
             }
             else if self.tealiumEnabled {
                 VFGLogger.log("TealiumHelper did reach trackEvent")
-                VFGTealiumHelper.sharedInstance.addVolatileDataSources(["page_locale" : self.tealiumLocale()])
                 var dataSources = dataSources
                 
                 if dataSources["event_name"] == nil {
@@ -280,9 +280,11 @@ open class VFGTealiumHelper : NSObject {
     }
     
     func stopTracking(){
-        if let TealiumClass : AnyClass = NSClassFromString("Tealium") {
-            let selector : Selector = NSSelectorFromString("destroyInstanceForKey:")
-            let methodIMP : IMP! = method_getImplementation(class_getClassMethod(TealiumClass, selector))
+        let selector : Selector = NSSelectorFromString("destroyInstanceForKey:")
+        if let TealiumClass : AnyClass = NSClassFromString("Tealium"),
+            let method : Method = class_getClassMethod(TealiumClass, selector) {
+            
+            let methodIMP : IMP! = method_getImplementation(method)
             
             typealias destroyInstanceForKeyFunctionType = @convention(c)(AnyClass?,Selector,String)->NSObject
             

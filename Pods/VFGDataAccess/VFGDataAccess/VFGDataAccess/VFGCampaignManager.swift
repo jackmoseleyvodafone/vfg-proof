@@ -81,7 +81,7 @@ public final class VFGCampaignManager : NSObject {
                     VFGCampaignManager.sharedInstance.campaignReceivedClosure?(result)
 
                     // Save visitorCampaigns in persistant data
-                    if let visitorCampaigns : [[String : String]] = requestPayload[CampaignManagerConstants.visitorCampaignsKey] as? [[String : String]] {
+                    if let visitorCampaigns : [[String : Any]] = requestPayload[CampaignManagerConstants.visitorCampaignsKey] as? [[String : Any]] {
                         
                         let value = VFGCampaignManager.sharedInstance.convertToString(array: visitorCampaigns)!
                         let key = CampaignManagerConstants.visitorCampaignsKey
@@ -200,12 +200,26 @@ public final class VFGCampaignManager : NSObject {
 
             if let campaignArray : [VovRequestPayload] = response?.vovRequestPayload {
                 for campaign in campaignArray {
-                    // for now we will use primary language for only for greece, this will change in the future.
-                    var campaignMsg = campaign.primary
 
-                    if !VFGConfiguration.locale.identifier.hasPrefix(greekLanguagePrefix) {
-                        campaignMsg = campaign.secondary
+                    let code = "\(Locale.preferredLanguages.first!)"
+                    
+                    var campaignMsg = campaign.secondary
+                    if (campaignMsg?.locale != nil){
+                        let codeArr = code.components(separatedBy: "-")
+                        let primaryLocaleArray = campaign.primary!.locale!.components(separatedBy: "_")
+                        
+                        let codeLang = "\(codeArr.first!)\(codeArr.last!)"
+                        let campaignLocale = "\(primaryLocaleArray[0])\(primaryLocaleArray[1])"
+                        if codeLang == campaignLocale{
+                            campaignMsg = campaign.primary
+                            
+                        }
+                        else{
+                            campaignMsg = campaign.secondary
+                        }
                     }
+                    
+                    
                     if let campaignMessage : VovMessage = campaignMsg {
 
                         switch campaignMessage.deliveryMethod {

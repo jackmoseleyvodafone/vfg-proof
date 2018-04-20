@@ -80,6 +80,7 @@
                         <outlet property="nudgeView" destination="yOC-L8-U9w" id="ao2-3g-f53"/>
                         <outlet property="nudgeViewHeightConstraint" destination="lKx-Ke-5YQ" id="NxY-nA-2Mc"/>
                         <outlet property="statusBarBackgroundView" destination="G67-yf-8UQ" id="1wH-5W-PWR"/>
+                        <outlet property="statusBarHeightConstraint" destination="Uc4-Nh-pFH" id="GaC-ai-JyQ"/>
                         <outlet property="topBar" destination="Bex-Rq-H1C" id="2W5-2B-ZvH"/>
                     </connections>
                 </viewController>

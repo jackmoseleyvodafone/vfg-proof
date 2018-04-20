@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "918CF7FD8B5767233EC6226AFE4F0536"
+               BlueprintIdentifier = "7A35CF4BEF683A6E23C80E56342FDD1B"
                BuildableName = "VFGSplash.bundle"
                BlueprintName = "VFGSplash-VFGSplash"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "918CF7FD8B5767233EC6226AFE4F0536"
+            BlueprintIdentifier = "7A35CF4BEF683A6E23C80E56342FDD1B"
             BuildableName = "VFGSplash.bundle"
             BlueprintName = "VFGSplash-VFGSplash"
             ReferencedContainer = "container:Pods.xcodeproj">

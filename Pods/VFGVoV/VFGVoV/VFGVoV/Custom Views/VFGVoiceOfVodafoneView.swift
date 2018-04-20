@@ -78,7 +78,8 @@ public class VFGVoiceOfVodafoneView: VFGVoVBaseView {
     //**********************
     
     public init() {
-        super.init(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+        super.init(frame: CGRect.zero)
+        translatesAutoresizingMaskIntoConstraints = false
         self.loadFromNib()
         self.registerCollectionViewCells()
     }
@@ -532,6 +533,7 @@ extension VFGVoiceOfVodafoneView : UICollectionViewDelegateFlowLayout  {
             if let _ :VFGVovWelcomeMessage =  dataModelArray[indexPath.item] as? VFGVovWelcomeMessage  {
                 self.cellsHeight.append(voVViewExpectedHeight + self.collectionViewBottomConstraint.constant)
                 return CGSize(width: collectionView.frame.size.width, height: voVViewExpectedHeight)
+
             }
             else if let vovModel :VFGVovGeneralModel =  dataModelArray[indexPath.item] as? VFGVovGeneralModel{
                 let cell : VFGVoVGeneralCell = VFGVoVGeneralCell(model: vovModel)
@@ -565,6 +567,7 @@ extension VFGVoiceOfVodafoneView : UICollectionViewDelegate {
             newCell.contentView.alpha = 0
             newCell.verticalSeparator.alpha = 0.0
             newCell.greetingLabel.alpha = 0.0
+            //            newCell.usernameLabel.alpha = 0.0
             newCell.marketNameLabel.alpha = 0.0
 
             welcomeMessageCell = newCell

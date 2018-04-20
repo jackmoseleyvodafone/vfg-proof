@@ -11,9 +11,6 @@ import Foundation
 fileprivate enum DAFParameters: String{
     case onlineTVChangeNameUsername = "username"
     case renewBenefitStatus = "status"
-    case getProductSiteId = "customerAccountId"
-    case getProductSubscriptionId = "subscriptionId"
-    case getProductType = "productType"
 }
 
 internal class DAFService {
@@ -61,10 +58,10 @@ internal class DAFService {
             bodyParameters[DAFParameters.onlineTVChangeNameUsername.rawValue] = mail
         }
 
-        execute(serviceUrl: serviceHost + urlPath, requestMethod: .patch, serviceName: DafServiceNames.onlineTvChangeUserName, parameters: bodyParameters, headers: nil, modelObject: BaseModel.self, needsAuthentication: false, success: success, failure: failure)
+        execute(serviceUrl: serviceHost + urlPath, requestMethod: .patch, serviceName: DafServiceNames.onlineTvChangeUserName, parameters: bodyParameters, headers: psHeaders(), modelObject: BaseModel.self, needsAuthentication: false, success: success, failure: failure)
     }
     
-    internal func renewBenefit(_ benefitStatus: String? = nil, tariffId: String? = nil, success:@escaping DAFManagerSuccessClosure, failure:  @escaping DAFManagerErrorClosure) {
+    internal func renewBenefit(_ benefitStatus: String?, tariffId: String?, success:@escaping DAFManagerSuccessClosure, failure:  @escaping DAFManagerErrorClosure) {
         let urlPath: String = String(format:  VFDAF.configuration.renewBenefitPath, tariffId ?? " ")
         let serviceHost: String = VFDAF.configuration.renewBenefitURL ?? VFDAF.configuration.baseURL
         
@@ -73,23 +70,62 @@ internal class DAFService {
             bodyParameters[DAFParameters.renewBenefitStatus.rawValue] = benefitStatus
         }
         
-        execute(serviceUrl: serviceHost + urlPath, requestMethod: .patch, serviceName: DafServiceNames.renewBenefit, parameters: bodyParameters, headers: nil, modelObject: BaseModel.self, needsAuthentication: false, success: success, failure: failure)
+        execute(serviceUrl: serviceHost + urlPath, requestMethod: .patch, serviceName: DafServiceNames.renewBenefit, parameters: bodyParameters, headers: psHeaders(), modelObject: BaseModel.self, needsAuthentication: false, success: success, failure: failure)
     }
     
-    internal func getProduct(_ serivceId: String, siteId: String, productType: String, success:@escaping DAFManagerSuccessClosure, failure:  @escaping DAFManagerErrorClosure) {
-        let urlPath: String = VFDAF.configuration.getProductPath
-        let serviceHost: String = VFDAF.configuration.getProductURL ?? VFDAF.configuration.baseURL
-        
-        let bodyParameters: [String: Any] = [DAFParameters.getProductSiteId.rawValue: siteId,
-                                             DAFParameters.getProductSubscriptionId.rawValue: serivceId,
-                                             DAFParameters.getProductType.rawValue: productType]
-        
-        execute(serviceUrl: serviceHost + urlPath, requestMethod: .get, serviceName: DafServiceNames.getProduct, parameters: bodyParameters, headers: nil, modelObject: BaseModel.self, needsAuthentication: false, success: success, failure: failure)
+    internal func getProduct(_ queryParameters: [String: String], success:@escaping DAFManagerSuccessClosure, failure:  @escaping DAFManagerErrorClosure) {
+        guard let urlString = url(baseUrl: VFDAF.configuration.getProductURL, servicePath: VFDAF.configuration.getProductPath, queryParameters: queryParameters) else {
+            let error = NSError(domain: "", code: NetworkErrorCode.serverNotFound.rawValue, userInfo: nil)
+            failure(NSError.generateNetworkError(error))
+            return
+        }
+
+        execute(serviceUrl: urlString, requestMethod: .get, serviceName: DafServiceNames.getProduct, parameters: nil, headers: psHeaders(), modelObject: BaseModel.self, needsAuthentication: false, success: success, failure: failure)
+    }
+    
+    internal func getServices(_ queryParameters: [String: String], success:@escaping DAFManagerSuccessClosure, failure:  @escaping DAFManagerErrorClosure) {
+        guard let urlString = url(baseUrl: VFDAF.configuration.getServicesURL, servicePath: VFDAF.configuration.getServicesPath, queryParameters: queryParameters) else {
+            let error = NSError(domain: "", code: NetworkErrorCode.serverNotFound.rawValue, userInfo: nil)
+            failure(NSError.generateNetworkError(error))
+            return
+        }
+
+        execute(serviceUrl: urlString, requestMethod: .get, serviceName: DafServiceNames.getServices, parameters: nil, headers: psHeaders(), modelObject: VFServicesResponseModel.self, needsAuthentication: false, success: success, failure: failure)
     }
     
     // MARK: - Utils
     internal func setNetworkTimeout(timeoutValue: TimeoutValues) {
         NetworkManager.setNetworkTimeout(timeoutValue: timeoutValue)
+    }
+    
+    internal func psHeaders() -> [String: String]{
+        let headers: [String: String] = [
+            "Accept": "application/json",
+            "vf-target-stub": "false",
+            "vf-country-code": "ES",
+            "Content-Type": "application/json",
+            "vf-target-environment": "aws-uat-es",
+            //VFGTODO: Hardcoded authorization token
+            "Authorization": "Bearer postpaid complete."
+        ]
+        
+        return headers
+    }
+    
+    internal func url(baseUrl: String?, servicePath: String, queryParameters:  [String: String]) -> String? {
+        let baseUrl = baseUrl ?? VFDAF.configuration.baseURL
+        guard let urlString = "\(baseUrl)\(servicePath)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {
+            return nil
+        }
+        
+        var urlComponents = URLComponents(string: urlString)
+        urlComponents?.queryItems = []
+        queryParameters.forEach { element in
+            let queryItem = URLQueryItem(name: element.key, value: element.value)
+            urlComponents?.queryItems?.append(queryItem)
+        }
+
+        return urlComponents?.url?.absoluteString
     }
     
 }

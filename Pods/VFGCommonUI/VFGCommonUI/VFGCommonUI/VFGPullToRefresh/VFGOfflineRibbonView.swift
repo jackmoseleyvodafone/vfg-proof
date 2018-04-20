@@ -160,7 +160,11 @@ class VFGOfflineRibbonView: UIView {
 
         self.autoPinEdge(.bottom, to: .top, of: parent)
         self.heightConstraint = self.autoSetDimension(.height, toSize: Constants.View.heightZero)
+        #if swift(>=4.1)
+        self.heightConstraint.priority = UILayoutPriority(rawValue: 1000)
+        #else
         self.heightConstraint.priority = 1000
+        #endif
 
         self.autoPinEdge(.trailing, to: .trailing, of: grandparent, withOffset: Constants.View.ShakeAnimation.offset)
         self.autoPinEdge(.leading, to: .leading, of: grandparent, withOffset: -Constants.View.ShakeAnimation.offset)
@@ -245,15 +249,20 @@ class VFGOfflineRibbonView: UIView {
         
         let message: String = "Last updated: " + timeStamp
         let attributedString: NSMutableAttributedString = NSMutableAttributedString(string: message)
-
-        let prefixColorAttributes = [NSForegroundColorAttributeName : UIColor.VFGGreyish]
-        let suffixColorAttributes = [NSForegroundColorAttributeName : UIColor.VFGWhite]
-        
         let fontRange: NSRange = (message as NSString).range(of: message)
         let prefixMessageRange: NSRange = (message as NSString).range(of: "Last updated:")
         let suffixMessageRange: NSRange = (message as NSString).range(of: timeStamp, options: .backwards)
         
+        #if swift(>=4.1)
+        let prefixColorAttributes = [kCTForegroundColorAttributeName as NSAttributedStringKey : UIColor.VFGGreyish]
+        let suffixColorAttributes = [kCTForegroundColorAttributeName as NSAttributedStringKey : UIColor.VFGWhite]
+        attributedString.addAttributes([kCTFontAttributeName as NSAttributedStringKey : UIFont.VFGS() as Any], range: fontRange)
+        #else
+        let prefixColorAttributes = [NSForegroundColorAttributeName : UIColor.VFGGreyish]
+        let suffixColorAttributes = [NSForegroundColorAttributeName : UIColor.VFGWhite]
         attributedString.addAttributes([NSFontAttributeName : UIFont.VFGS() as Any], range: fontRange)
+        #endif
+        
         attributedString.addAttributes(prefixColorAttributes, range: prefixMessageRange)
         attributedString.addAttributes(suffixColorAttributes, range: suffixMessageRange)
         

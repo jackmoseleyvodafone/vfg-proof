@@ -60,7 +60,7 @@
                 <constraint firstAttribute="bottom" secondItem="uWR-mt-NaT" secondAttribute="bottom" constant="25" id="pIi-Ej-CYo">
                     <variation key="heightClass=regular-widthClass=regular" constant="30"/>
                 </constraint>
-                <constraint firstItem="uWR-mt-NaT" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="ydF-u9-UZo"/>
+                <constraint firstItem="uWR-mt-NaT" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" constant="0.5" id="ydF-u9-UZo"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="34.5" y="54.5"/>

@@ -6,11 +6,25 @@
 //  Copyright © 2017 VFG. All rights reserved.
 //
 
-import UIKit
+import Foundation
 import ObjectMapper
+import Cache
+import Gloss
 
-public class BaseModel:NSObject,  Mappable {
+open class BaseModel:NSObject, Glossy, Mappable, Cachable, NSCoding {
     public required init?(map: Map) {}
     public override init() {}
-    public func mapping(map: Map) {}
+    open func mapping(map: Map) {}
+    
+    //MARK: Caching methods
+    public typealias CacheType = BaseModel
+    open func encode(with aCoder: NSCoder) { }
+    public required init?(coder aDecoder: NSCoder) { }
+    
+    //MARK: Glossy parsing methods
+    public required init?(json: Gloss.JSON) {}
+    
+    open func toJSON() -> Gloss.JSON? {
+        return nil
+    }
 }

@@ -25,7 +25,7 @@ public class VFGTopBar: UIView {
     public internal(set) var leftButton : UIButton!
     public internal(set) var rightButton : VFGBadgeButton!
     
-    func onHamburgerBadgeReshresh(notification : NSNotification) {
+    @objc func onHamburgerBadgeReshresh(notification : NSNotification) {
         self.rightButton.badgeString = notification.userInfo?[VFGResponsiveUI.badgeStringKey] as? String ?? ""
         
     }

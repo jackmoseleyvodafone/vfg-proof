@@ -374,9 +374,11 @@ public class VFGAlertViewController: UIViewController {
             VFGLogger.log("Cannot unwrap first vodafoneRegularFont")
             return attrString
         }
-        
+        #if swift(>=4.1)
+        let firstAttrString: NSAttributedString = NSAttributedString(string: firstMessage, attributes: [kCTFontAttributeName as NSAttributedStringKey: vodafoneFirstRegularFont, kCTForegroundColorAttributeName as NSAttributedStringKey: UIColor.white])
+        #else
         let firstAttrString: NSAttributedString = NSAttributedString(string: firstMessage, attributes: [NSFontAttributeName: vodafoneFirstRegularFont, NSForegroundColorAttributeName: UIColor.white])
-        
+        #endif
         attrString.append(firstAttrString)
         
         guard let vodafoneSecondRegularFont : UIFont = UIFont.vodafoneRegularFont(seconddMessageFontSize) else {
@@ -385,7 +387,11 @@ public class VFGAlertViewController: UIViewController {
         }
         
         if !secondMessage.isEmpty {
+            #if swift(>=4.1)
+            let secondAttrString: NSAttributedString = NSAttributedString(string: "\n"+secondMessage, attributes: [kCTFontAttributeName as NSAttributedStringKey: vodafoneSecondRegularFont, kCTForegroundColorAttributeName as NSAttributedStringKey: UIColor.white])
+            #else
             let secondAttrString: NSAttributedString = NSAttributedString(string: "\n"+secondMessage, attributes: [NSFontAttributeName: vodafoneSecondRegularFont, NSForegroundColorAttributeName: UIColor.white])
+            #endif
             attrString.append(secondAttrString)
             
         }

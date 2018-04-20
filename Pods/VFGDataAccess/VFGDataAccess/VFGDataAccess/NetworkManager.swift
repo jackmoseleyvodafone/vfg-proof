@@ -104,7 +104,7 @@ public struct NetworkManager {
                 case .success:
                     if let error  = response.result.error {
                         onError(NetworkManager.log(error as NSError, url.absoluteString))
-                        onError(error)
+//                        onError(error)
                     }
                     if let json = response.result.value as? [String:Any] {
                         completion(json)

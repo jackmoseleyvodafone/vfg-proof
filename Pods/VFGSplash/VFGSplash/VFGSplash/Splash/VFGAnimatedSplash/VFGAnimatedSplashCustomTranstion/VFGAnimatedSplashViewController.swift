@@ -278,7 +278,7 @@ class VFGAnimatedSplashViewController: UIViewController, UIViewControllerTransit
      Complete The Animation
      */
     
-    open func completeAnimation() {
+    @objc open func completeAnimation() {
         
         self.logoLoadingLottiAnimationView?.layer.add(self.loadingLogoAnimationGroup, forKey: BasicAnimationsKeys.animationKey)
         logoCircleLockup()
@@ -398,7 +398,19 @@ class VFGAnimatedSplashViewController: UIViewController, UIViewControllerTransit
         modelView.statusBarStyle = statusBarStyle
         modelView.modalPresentationStyle = .custom
         animateBackGround()
-        self.view.window?.rootViewController?.present(modelView, animated: true, completion:{
+        #if swift(>=4.1)
+        self.present(modelView, animated: true, completion:{
+            if self.customWindow != nil{
+                self.customWindow?.bringSubview(toFront: self.logoCircleLottiAnimationView!)
+                
+            } else{
+                if let window : UIWindow = (UIApplication.shared.windows.last){
+                    window.bringSubview(toFront: self.logoCircleLottiAnimationView!)
+                }
+            }
+        })
+        #else
+        self.present(modelView, animated: true, completion:{
             (isFinised) in
             if self.customWindow != nil{
                 self.customWindow?.bringSubview(toFront: self.logoCircleLottiAnimationView!)
@@ -409,6 +421,7 @@ class VFGAnimatedSplashViewController: UIViewController, UIViewControllerTransit
                 }
             }
         })
+        #endif
     }
     
     @objc fileprivate func willEnterforground (_ notification: NSNotification){

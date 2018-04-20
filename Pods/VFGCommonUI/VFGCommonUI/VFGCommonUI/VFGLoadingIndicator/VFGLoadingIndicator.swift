@@ -30,7 +30,11 @@ public class VFGLoadingIndicator: UIView {
     }
 
     required public init?(coder aDecoder: NSCoder) {
-        fatalError("Init with coder not supported")
+        super.init(coder: aDecoder)
+        self.frame = aDecoder.decodeCGRect(forKey: "frame")
+        if let defaultLoadingMessage = aDecoder.decodeObject(forKey: "defaultLoadingMessage") as? String {
+            self.defaultLoadingMessage = defaultLoadingMessage
+        }
     }
     
     override public var frame: CGRect {

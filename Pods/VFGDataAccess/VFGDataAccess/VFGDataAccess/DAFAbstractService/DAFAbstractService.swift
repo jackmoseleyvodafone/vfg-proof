@@ -198,12 +198,12 @@ class DAFAbstractService{
         }
     }
     
-    func getSingleOrMultipleBillsHistory(billingAccountId:String,billRequestType:BillRequestType,success:@escaping  (_ model:BillingModel)->(), failure:  @escaping DAFManagerAbstractErrorClosure) {
+    func getSingleOrMultipleBillsHistory(billingAccountId:String,billRequestType:BillRequestType,page:Int,success:@escaping  (_ model:BillingModel)->(), failure:  @escaping DAFManagerAbstractErrorClosure) {
         if VFDAF.configuration.isOfflineEnabled == true , let url = OfflineFilesName.BillsHistory.getFileUrl() , url.isFileURL == true , let data = try?Data.init(contentsOf: url){
             self.executeOffline(target: BillingApi.offlineLocalFile(url: url), modelObject: BillingModel.self, success: success, failure: failure)
             
         }else {
-            self.execute(target: BillingApi.singleOrMultipleBillsHistory(billingAccountId: billingAccountId, billRequestType: billRequestType), modelObject: BillingModel.self, needsAuthentication: false,  success: { (model) in
+            self.execute(target: BillingApi.singleOrMultipleBillsHistory(billingAccountId: billingAccountId, billRequestType: billRequestType, offset: page), modelObject: BillingModel.self, needsAuthentication: false,  success: { (model) in
                 success(model)
             }, failure: failure)
         }
@@ -230,6 +230,7 @@ extension DAFAbstractService {
 
     func getSingleCurrentBalance(billingAccountId:String,
                                 billRequestType:BillRequestType,
+                                page:Int,
                                 success:@escaping  (_ model:BillingModel)->(),
                                 failure:  @escaping DAFManagerAbstractErrorClosure) {
         if VFDAF.configuration.isOfflineEnabled {
@@ -245,7 +246,7 @@ extension DAFAbstractService {
                     self.executeOffline(target: BillingApi.offlineLocalFile(url: url), modelObject: BillingModel.self, success: success, failure: failure)
             }
         }else{
-            self.execute(target: BillingApi.singleCurrentBalance(billingAccountId: billingAccountId, billRequestType: billRequestType), modelObject: BillingModel.self, needsAuthentication: false,  success: { (model) in
+            self.execute(target: BillingApi.singleCurrentBalance(billingAccountId: billingAccountId, billRequestType: billRequestType, offset: page), modelObject: BillingModel.self, needsAuthentication: false,  success: { (model) in
                 success(model)
             }, failure: failure)
         }
@@ -253,6 +254,7 @@ extension DAFAbstractService {
     
     func getMultipleCurrentBalance(billingAccountId:String,
                                  billRequestType:BillRequestType,
+                                 page:Int,
                                  success:@escaping  (_ model:BillingModel)->(),
                                  failure:  @escaping DAFManagerAbstractErrorClosure) {
         if VFDAF.configuration.isOfflineEnabled {
@@ -268,7 +270,7 @@ extension DAFAbstractService {
                 self.executeOffline(target: BillingApi.offlineLocalFile(url: url), modelObject: BillingModel.self, success: success, failure: failure)
             }
         }else{
-            self.execute(target: BillingApi.multipleCurrentBalance(billingAccountId: billingAccountId, billRequestType: billRequestType), modelObject: BillingModel.self, needsAuthentication: false,  success: { (model) in
+            self.execute(target: BillingApi.multipleCurrentBalance(billingAccountId: billingAccountId, billRequestType: billRequestType, offset: page), modelObject: BillingModel.self, needsAuthentication: false,  success: { (model) in
                 success(model)
             }, failure: failure)
         }

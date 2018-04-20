@@ -225,10 +225,17 @@ open class VFGScrollableTabBar: UIView, UICollectionViewDataSource, UICollection
             VFGLogger.log("Cannot unwrap itemTitleFont. Skipping cell text customization")
             return cell
         }
+        #if swift(>=4.1)
+        let attributes: [NSAttributedStringKey : Any] = [kCTParagraphStyleAttributeName as NSAttributedStringKey: paragraphStyle,
+                                                         kCTFontAttributeName as NSAttributedStringKey: itemTitleFont]
+        cell.titleLabel.attributedText = NSAttributedString(string: item.title ?? "",
+                                                            attributes: attributes)
+        #else
         let attributes: [String : Any] = [NSParagraphStyleAttributeName: paragraphStyle,
                                           NSFontAttributeName: itemTitleFont]
         cell.titleLabel.attributedText = NSAttributedString(string: item.title ?? "",
                                                             attributes: attributes)
+        #endif
         guard let itemTitle : String = item.title else {
             VFGLogger.log("Cannot unwrap itemTitle")
             return cell

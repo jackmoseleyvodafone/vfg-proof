@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DDEB27B80E05A170094BD7F4672DA856"
+               BlueprintIdentifier = "1F5C9B8E117CC0CA1432BD201B4C0A01"
                BlueprintName = "VFGDataAccess"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "VFGDataAccess.framework">
